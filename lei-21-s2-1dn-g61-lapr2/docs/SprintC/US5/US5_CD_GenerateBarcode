@@ -1,0 +1,27 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide attributes
+
+note left of ExternalModuleBarcode
+This interface will be targeted
+of multiple implementations,
+one for each external algorithm
+that has to be supported.
+end note
+
+interface ExternalModuleBarcode << interface >> {
+    +String generateBarcode()
+}
+
+class GenerateBarcode{
+    + String generateBarcode()
+    + String getNumberBarcode()
+}
+
+class BarbecueAPI {
+   +Barcode createUPCA(String data)
+}
+
+ExternalModuleBarcode <|.. GenerateBarcode
+GenerateBarcode-d->  BarbecueAPI
+@enduml

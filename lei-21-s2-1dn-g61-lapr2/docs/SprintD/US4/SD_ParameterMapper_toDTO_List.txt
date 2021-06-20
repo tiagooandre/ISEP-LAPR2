@@ -1,0 +1,36 @@
+participant ":CreateTestController" as ctc #7dcfff
+
+participant ":parameterMapper" as pm #7dcfff
+participant "parameterList: List<Parameter>" as pl #7dcfff
+participant "pDTO: ParameterDTO" as pDTO #7dcfff
+participant "parametersDTO: List<ParameterDTO>" as pdto #7dcfff
+participant "p: Parameter" as p #7dcfff
+
+
+
+ctc->pm: 1:  toParametersDTO(parameterList)
+activate pm #7dcfff
+
+pm-->>*pdto: 2: create()
+loop for each Parameter in parameters
+
+pm->pl: 3: p=Parameter(i)
+activate pl #7dcfff
+deactivateafter pl
+
+pm->p: 4: code = getCode()
+activate p #7dcfff
+deactivateafter p
+
+pm->p: 5: description = getDescription()
+activate p #7dcfff
+deactivateafter p
+
+pm-->>*pDTO: 6: create(code, description)
+
+pm->pdto: 7: add(pDTO)
+activate pdto #7dcfff
+deactivateafter pdto
+
+end
+pm->ctc: 8: parametersDTO

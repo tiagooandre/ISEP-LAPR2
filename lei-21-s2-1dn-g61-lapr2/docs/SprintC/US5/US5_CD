@@ -1,0 +1,184 @@
+@startuml
+title UC5 - Class Diagram
+
+class RecordSampleUI
+
+class RecordSampleController{
+    + validateUser()
+    + getTests()
+    + getTest(testdto)
+    + generateBarcode()
+    + setSampleData()
+}
+
+class App {
+    + getCompany()
+    + getCurrentUserSession()
+}
+
+class UserSession {
+    + isLoggedInWithRole(MEDICAL LAB TECHNICIAN)
+}
+
+class Employee {
+    String employeeID;
+    String name;
+    String address;
+    String phoneNumber;
+    String codeSOC;
+}
+
+class Company {
+    string designation;
+    + getTestStore()
+}
+
+class TestStore {
+    + getTestByCode(code)
+    + getTests()
+}
+
+class TestsMapper {
+    + toDTO(tests)
+}
+
+class ParametersMapper {
+    + toDTO(parameters)
+}
+
+class TestDTO {
+    + String testCode;
+    + String testnhsCode;
+    + String testDescription;
+    + String nameClient;
+    + getCode()
+}
+
+class TestDTO {
+    + String typeCode;
+    + String typeDescription;
+}
+
+interface ExternalModuleBarcode << interface >>{
+    + String generateBarcode()
+}
+
+class Test {
+    String code;
+    String NHSCode;
+    String testResult
+    String dateSample;
+    String timeSmaple;
+    String dateChemAnalysis;
+    String timeChemAnalysis;
+    String dateDiagnosis;
+    String timeDiagnosis;
+    String dateValidTest;
+    String timeValidTest;
+    + createSample()
+    + addSample()
+    + setDateSample()
+    + setTimeSample()
+    + getTestType()
+    + getCode()
+    + getNHSCode()
+    + getDescription()
+    + getTestType()
+    + getClient()
+    + checkTestState()
+}
+
+class Sample {
+    String number_barcode
+}
+
+class Client {
+    String citizenCardNumber;
+    String numberNHS;
+    String numberTIN;
+    String birthDate;
+    string sex;
+    String phoneNumber;
+    string name;
+    + getName()
+}
+
+class TestType {
+    String designation;
+    String code;
+    String collectingMethods;
+    + getCode()
+    + getDescription()
+    + getMethods()
+}
+
+class TestTypeDTO {
+    String designation;
+    String code;
+    String collectingMethods;
+}
+
+class Parameter {
+    String designation;
+    String code;
+    + getCode()
+    + getDescription()
+    + getParameterCategory()
+}
+
+class ParameterDTO {
+    String designation;
+    String code;
+    String categoryDescription;
+}
+
+class ParameterCategory {
+    String code;
+    string description;
+    String NHSID;
+    + getDescriptionPC()
+}
+
+
+RecordSampleUI .-> RecordSampleController
+RecordSampleUI .-> TestDTO
+
+RecordSampleController.-> Company
+RecordSampleController.-> TestStore
+RecordSampleController.-> App
+RecordSampleController.-> UserSession
+RecordSampleController.-> Test
+RecordSampleController.-> TestDTO
+RecordSampleController.-> TestsMapper
+
+TestStore "1" -- "*" Test: contains >
+Test "1" -- "*" Sample: contains >
+Test "*" -- "1" ExternalModuleBarcode: uses >
+Test "1" -- "1..*" Parameter: has >
+Test "1" -- "1" TestType: is of >
+
+Company "1" -- "1" TestStore: has >
+Company "1" -- "*" Employee: has >
+Employee "1" <|-- "*" MedicalLabTechnician
+MedicalLabTechnician "1" -- "*" Sample: records >
+MedicalLabTechnician "1" -- "*" Test: has access>
+
+TestsMapper .-> TestDTO
+TestsMapper .-> Test
+TestsMapper .-> ParametersMapper
+TestsMapper .-> TestTypeDTO
+ParametersMapper .-> ParameterDTO
+ParametersMapper .-> Parameter
+
+Sample "*" -- "1" ExternalModuleBarcode: keeps the data returned by>
+
+Client "1" -- "*" Test: does a >
+Client "*" -- "1" MedicalLabTechnician: is tested by >
+
+Parameter "*" -- "1" ParameterCategory: presented under >
+TestType "*" -- "*"  ParameterCategory: measure by >
+Company "1" -- "*" Client: has >
+Company "1" -- "*" TestType: conducts >
+TestDTO "1" -- "1" TestTypeDTO: has >
+TestDTO "1" -- "1" ParameterDTO: has >
+@enduml

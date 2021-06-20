@@ -1,0 +1,37 @@
+participant ":CreateTestController" as ctc #7dcfff
+
+participant ":testTypeMapper" as ttm #7dcfff
+participant "testTypes: List<TestType>" as ttl #7dcfff
+participant "ttDTO: TestTypeDTO" as ttDTO #7dcfff
+participant "testTypesDTO: List<TestTypeDTO>" as ttdto #7dcfff
+participant "tt: TestType" as tt #7dcfff
+
+
+
+ctc->ttm: 1:  toTestTypesDTO(testTypes)
+activate ttm #7dcfff
+
+
+ttm-->>*ttdto: 2: create()
+loop for each TestType in testTypes
+
+ttm->ttl: 3: tt=TestType(i)
+activate ttl #7dcfff
+deactivateafter ttl
+
+ttm->tt: 4: code = getCode()
+activate tt #7dcfff
+deactivateafter tt
+
+ttm->tt: 5: description = getDescription()
+activate tt #7dcfff
+deactivateafter tt
+
+ttm-->>*ttDTO: 6: create(code, description)
+
+ttm->ttdto: 7: add(ttDTO)
+activate ttdto #7dcfff
+deactivateafter ttdto
+
+end
+ttm->ctc: 8: testTypesDTO

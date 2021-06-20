@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1088px" preserveAspectRatio="none" style="width:2269px;height:1088px;background:#FFFFFF;" version="1.1" viewBox="0 0 2269 1088" width="2269px" zoomAndPan="magnify"><defs><filter height="300%" id="fp7j8kszapnri" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="887.6484" style="stroke:#A80036;stroke-width:1.0;" width="10" x="53" y="98.2969"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="563" y="119.4297"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="417.6563" style="stroke:#A80036;stroke-width:1.0;" width="10" x="563" y="177.6953"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="118.5313" style="stroke:#A80036;stroke-width:1.0;" width="10" x="563" y="624.4844"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="222.7969" style="stroke:#A80036;stroke-width:1.0;" width="10" x="563" y="772.1484"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="239.125" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1060" y="206.8281"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="59.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1060" y="507.0859"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="97.3984" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1060" y="624.4844"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="148.5313" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1060" y="801.2813"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1307" y="235.9609"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1307" y="536.2188"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1577" y="320.0938"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="35.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1577" y="410.8203"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="119.3984" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1577" y="830.4141"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="75.3984" style="stroke:#000000;stroke-width:2.0;" width="1839" x="416" y="639.4844"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="58" x2="58" y1="88.2969" y2="1003.9453"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="568" x2="568" y1="88.2969" y2="1003.9453"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1065" x2="1065" y1="88.2969" y2="1003.9453"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1311.5" x2="1311.5" y1="88.2969" y2="1003.9453"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1582" x2="1582" y1="88.2969" y2="1003.9453"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="2140" x2="2140" y1="368.8906" y2="1003.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="5" y="84.9951">Administrator</text><ellipse cx="58" cy="15" fill="#FEFECE" filter="url(#fp7j8kszapnri)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M58,23 L58,50 M45,31 L71,31 M58,50 L45,65 M58,50 L71,65 " fill="none" filter="url(#fp7j8kszapnri)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="5" y="1015.9404">Administrator</text><ellipse cx="58" cy="1029.2422" fill="#FEFECE" filter="url(#fp7j8kszapnri)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M58,1037.2422 L58,1064.2422 M45,1045.2422 L71,1045.2422 M58,1064.2422 L45,1079.2422 M58,1064.2422 L71,1079.2422 " fill="none" filter="url(#fp7j8kszapnri)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#fp7j8kszapnri)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="280" x="426" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="266" x="433" y="72.9951">:RegisterClinicalAnalisysLaboratoryUI</text><rect fill="#FEFECE" filter="url(#fp7j8kszapnri)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="280" x="426" y="1002.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="266" x="433" y="1022.9404">:RegisterClinicalAnalisysLaboratoryUI</text><rect fill="#FEFECE" filter="url(#fp7j8kszapnri)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="340" x="893" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="326" x="900" y="72.9951">:RegisterClinicalAnalisysLaboratoryController</text><rect fill="#FEFECE" filter="url(#fp7j8kszapnri)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="340" x="893" y="1002.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="326" x="900" y="1022.9404">:RegisterClinicalAnalisysLaboratoryController</text><rect fill="#FEFECE" filter="url(#fp7j8kszapnri)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="87" x="1266.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="1273.5" y="72.9951">:Company</text><rect fill="#FEFECE" filter="url(#fp7j8kszapnri)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="87" x="1266.5" y="1002.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="1273.5" y="1022.9404">:Company</text><rect fill="#FEFECE" filter="url(#fp7j8kszapnri)" height="46.5938" style="stroke:#A80036;stroke-width:1.5;" width="170" x="1495" y="36.7031"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="1561" y="56.6982">store</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="1502" y="72.9951">:RegistarClinicalStore</text><rect fill="#FEFECE" filter="url(#fp7j8kszapnri)" height="46.5938" style="stroke:#A80036;stroke-width:1.5;" width="170" x="1495" y="1002.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="1561" y="1022.9404">store</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="1502" y="1039.2373">:RegistarClinicalStore</text><rect fill="#FEFECE" filter="url(#fp7j8kszapnri)" height="46.5938" style="stroke:#A80036;stroke-width:1.5;" width="206" x="2035" y="1002.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="12" x="2132" y="1022.9404">cl</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="192" x="2042" y="1039.2373">:ClinicalAnalisysLaboratory</text><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="887.6484" style="stroke:#A80036;stroke-width:1.0;" width="10" x="53" y="98.2969"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="563" y="119.4297"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="417.6563" style="stroke:#A80036;stroke-width:1.0;" width="10" x="563" y="177.6953"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="118.5313" style="stroke:#A80036;stroke-width:1.0;" width="10" x="563" y="624.4844"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="222.7969" style="stroke:#A80036;stroke-width:1.0;" width="10" x="563" y="772.1484"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="239.125" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1060" y="206.8281"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="59.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1060" y="507.0859"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="97.3984" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1060" y="624.4844"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="148.5313" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1060" y="801.2813"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1307" y="235.9609"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1307" y="536.2188"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1577" y="320.0938"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="35.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1577" y="410.8203"/><rect fill="#FFFFFF" filter="url(#fp7j8kszapnri)" height="119.3984" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1577" y="830.4141"/><polygon fill="#A80036" points="551,115.4297,561,119.4297,551,123.4297,555,119.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="63" x2="557" y1="119.4297" y2="119.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="70" y="114.3638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="278" x="83" y="114.3638">asks to register Clinical Analisys Laboratory</text><polygon fill="#A80036" points="74,144.5625,64,148.5625,74,152.5625,70,148.5625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="68" x2="567" y1="148.5625" y2="148.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="80" y="143.4966">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="463" x="93" y="143.4966">requests data (laboratoryID, name, address, phoneNumber, numberTIN)</text><polygon fill="#A80036" points="551,173.6953,561,177.6953,551,181.6953,555,177.6953" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="63" x2="557" y1="177.6953" y2="177.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="8" x="70" y="172.6294">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="138" x="82" y="172.6294">types requested data</text><polygon fill="#A80036" points="1048,202.8281,1058,206.8281,1048,210.8281,1052,206.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="573" x2="1054" y1="206.8281" y2="206.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="580" y="201.7622">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="455" x="593" y="201.7622">createClinical(laboratoryID, name, address, phoneNumber, numberTIN)</text><polygon fill="#A80036" points="1295,231.9609,1305,235.9609,1295,239.9609,1299,235.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1070" x2="1301" y1="235.9609" y2="235.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="1077" y="230.895">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="205" x="1090" y="230.895">store=getRegistarClinicalStore()</text><polygon fill="#A80036" points="1565,316.0938,1575,320.0938,1565,324.0938,1569,320.0938" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1070" x2="1571" y1="320.0938" y2="320.0938"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="1077" y="315.0278">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="475" x="1090" y="315.0278">cl=createClinical(laboratoryID, name, address, phoneNumber, numberTIN)</text><polygon fill="#A80036" points="2023,345.2266,2033,349.2266,2023,353.2266,2027,349.2266" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="1582" x2="2029" y1="349.2266" y2="349.2266"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="1589" y="344.1606">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="411" x="1602" y="344.1606">create(laboratoryID, name, address, phoneNumber, numberTIN)</text><rect fill="#FEFECE" filter="url(#fp7j8kszapnri)" height="46.5938" style="stroke:#A80036;stroke-width:1.5;" width="206" x="2035" y="328.0938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="12" x="2132" y="348.0889">cl</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="192" x="2042" y="364.3857">:ClinicalAnalisysLaboratory</text><polygon fill="#A80036" points="1565,406.8203,1575,410.8203,1565,414.8203,1569,410.8203" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1070" x2="1571" y1="410.8203" y2="410.8203"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="1077" y="405.7544">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="115" x="1090" y="405.7544">validateClinical(cl)</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1587" x2="1629" y1="444.9531" y2="444.9531"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1629" x2="1629" y1="444.9531" y2="457.9531"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1582" x2="1629" y1="457.9531" y2="457.9531"/><polygon fill="#A80036" points="1592,453.9531,1582,457.9531,1592,461.9531,1588,457.9531" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="1594" y="439.8872">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="1607" y="439.8872">exitsSame(cl)</text><polygon fill="#A80036" points="1048,503.0859,1058,507.0859,1048,511.0859,1052,507.0859" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="573" x2="1054" y1="507.0859" y2="507.0859"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="19" x="580" y="502.02">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57" x="603" y="502.02">testList()</text><polygon fill="#A80036" points="1295,532.2188,1305,536.2188,1295,540.2188,1299,536.2188" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1070" x2="1301" y1="536.2188" y2="536.2188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="1077" y="531.1528">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="1099" y="531.1528">getTestTypes()</text><polygon fill="#A80036" points="74,591.3516,64,595.3516,74,599.3516,70,595.3516" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="68" x2="567" y1="595.3516" y2="595.3516"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="80" y="590.2856">12</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="355" x="102" y="590.2856">shows the data and the list of test types to be selected</text><polygon fill="#A80036" points="551,620.4844,561,624.4844,551,628.4844,555,624.4844" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="63" x2="557" y1="624.4844" y2="624.4844"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="17" x="70" y="619.4185">13</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="91" y="619.4185">select test type(s)</text><path d="M416,639.4844 L494,639.4844 L494,646.4844 L484,656.4844 L416,656.4844 L416,639.4844 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="75.3984" style="stroke:#000000;stroke-width:2.0;" width="1839" x="416" y="639.4844"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="33" x="431" y="652.5513">loop</text><polygon fill="#A80036" points="1048,673.75,1058,677.75,1048,681.75,1052,677.75" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="573" x2="1054" y1="677.75" y2="677.75"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="580" y="672.6841">14</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="602" y="672.6841">fillTestList(t)</text><polygon fill="#A80036" points="2128,702.8828,2138,706.8828,2128,710.8828,2132,706.8828" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1070" x2="2134" y1="706.8828" y2="706.8828"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="1077" y="701.8169">15</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="1099" y="701.8169">addTestType(t)</text><polygon fill="#A80036" points="74,739.0156,64,743.0156,74,747.0156,70,743.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="68" x2="567" y1="743.0156" y2="743.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="80" y="737.9497">16</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="134" x="102" y="737.9497">request confirmation</text><polygon fill="#A80036" points="551,768.1484,561,772.1484,551,776.1484,555,772.1484" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="63" x2="557" y1="772.1484" y2="772.1484"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="70" y="767.0825">17</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="89" x="92" y="767.0825">confirms data</text><polygon fill="#A80036" points="1048,797.2813,1058,801.2813,1048,805.2813,1052,801.2813" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="573" x2="1054" y1="801.2813" y2="801.2813"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="580" y="796.2153">18</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="85" x="602" y="796.2153">saveClinical()</text><polygon fill="#A80036" points="1565,826.4141,1575,830.4141,1565,834.4141,1569,830.4141" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1070" x2="1571" y1="830.4141" y2="830.4141"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="1077" y="825.3481">19</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="95" x="1099" y="825.3481">saveClinical(cl)</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1587" x2="1629" y1="859.5469" y2="859.5469"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1629" x2="1629" y1="859.5469" y2="872.5469"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1588" x2="1629" y1="872.5469" y2="872.5469"/><polygon fill="#A80036" points="1598,868.5469,1588,872.5469,1598,876.5469,1594,872.5469" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="19" x="1594" y="854.481">20</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="115" x="1617" y="854.481">validateClinical(cl)</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1587" x2="1629" y1="901.6797" y2="901.6797"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1629" x2="1629" y1="901.6797" y2="914.6797"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1588" x2="1629" y1="914.6797" y2="914.6797"/><polygon fill="#A80036" points="1598,910.6797,1588,914.6797,1598,918.6797,1594,914.6797" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="1594" y="896.6138">21</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="95" x="1616" y="896.6138">existsSame(cl)</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1587" x2="1629" y1="948.8125" y2="948.8125"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1629" x2="1629" y1="948.8125" y2="961.8125"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1582" x2="1629" y1="961.8125" y2="961.8125"/><polygon fill="#A80036" points="1592,957.8125,1582,961.8125,1592,965.8125,1588,961.8125" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="1594" y="943.7466">22</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="1616" y="943.7466">addClinical(cl)</text><polygon fill="#A80036" points="69,981.9453,59,985.9453,69,989.9453,65,985.9453" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="63" x2="562" y1="985.9453" y2="985.9453"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="17" x="75" y="980.8794">23</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="162" x="96" y="980.8794">inform operation success</text><!--MD5=[a4396ecfa7d18711fe61d3afcf9ac8a3]
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":RegisterClinicalAnalisysLaboratoryUI" as UI
+participant ":RegisterClinicalAnalisysLaboratoryController" as CTRL
+participant ":Company" as C
+participant "store\n:RegistarClinicalStore" as CO
+
+participant "cl\n:ClinicalAnalisysLaboratory" as CLS
+
+
+activate ADM
+ADM -> UI : asks to register Clinical Analisys Laboratory
+activate UI
+UI - -> ADM : requests data (laboratoryID, name, address, phoneNumber, numberTIN)
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+
+UI -> CTRL : createClinical(laboratoryID, name, address, phoneNumber, numberTIN)
+activate CTRL
+
+CTRL -> C : store=getRegistarClinicalStore()
+activate C
+|||
+deactivate C
+
+CTRL -> CO : cl=createClinical(laboratoryID, name, address, phoneNumber, numberTIN)
+activate CO
+CO - -> CLS** : create(laboratoryID, name, address, phoneNumber, numberTIN)
+deactivate CO
+
+
+CTRL -> CO : validateClinical(cl)
+activate CO
+CO -> CO : exitsSame(cl)
+|||
+deactivate CO
+deactivate CTRL
+UI -> CTRL : testList()
+activate CTRL
+CTRL -> C : getTestTypes()
+activate C
+deactivate C
+
+deactivate CTRL
+UI - -> ADM : shows the data and the list of test types to be selected
+deactivate UI
+
+ADM -> UI : select test type(s)
+activate UI
+activate CTRL
+loop 
+            UI -> CTRL: fillTestList(t)
+            CTRL-> CLS : addTestType(t)
+        
+        end
+deactivate CTRL       
+UI -> ADM : request confirmation
+deactivate UI
+
+ADM - -> UI : confirms data 
+activate UI
+UI -> CTRL : saveClinical()
+activate CTRL
+CTRL -> CO : saveClinical(cl)
+activate CO
+CO -> CO : validateClinical(cl)
+CO -> CO : existsSame(cl)
+CO -> CO : addClinical(cl)
+deactivate CO
+deactivate CTRL
+
+UI- -> ADM: inform operation success
+deactivate ADM
+@enduml
+
+@startuml
+autonumber
+actor "Administrator" as ADM
+
+participant ":RegisterClinicalAnalisysLaboratoryUI" as UI
+participant ":RegisterClinicalAnalisysLaboratoryController" as CTRL
+participant ":Company" as C
+participant "store\n:RegistarClinicalStore" as CO
+
+participant "cl\n:ClinicalAnalisysLaboratory" as CLS
+
+
+activate ADM
+ADM -> UI : asks to register Clinical Analisys Laboratory
+activate UI
+UI - -> ADM : requests data (laboratoryID, name, address, phoneNumber, numberTIN)
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+
+UI -> CTRL : createClinical(laboratoryID, name, address, phoneNumber, numberTIN)
+activate CTRL
+
+CTRL -> C : store=getRegistarClinicalStore()
+activate C
+|||
+deactivate C
+
+CTRL -> CO : cl=createClinical(laboratoryID, name, address, phoneNumber, numberTIN)
+activate CO
+CO - -> CLS** : create(laboratoryID, name, address, phoneNumber, numberTIN)
+deactivate CO
+
+
+CTRL -> CO : validateClinical(cl)
+activate CO
+CO -> CO : exitsSame(cl)
+|||
+deactivate CO
+deactivate CTRL
+UI -> CTRL : testList()
+activate CTRL
+CTRL -> C : getTestTypes()
+activate C
+deactivate C
+
+deactivate CTRL
+UI - -> ADM : shows the data and the list of test types to be selected
+deactivate UI
+
+ADM -> UI : select test type(s)
+activate UI
+activate CTRL
+loop 
+            UI -> CTRL: fillTestList(t)
+            CTRL-> CLS : addTestType(t)
+        
+        end
+deactivate CTRL       
+UI -> ADM : request confirmation
+deactivate UI
+
+ADM - -> UI : confirms data 
+activate UI
+UI -> CTRL : saveClinical()
+activate CTRL
+CTRL -> CO : saveClinical(cl)
+activate CO
+CO -> CO : validateClinical(cl)
+CO -> CO : existsSame(cl)
+CO -> CO : addClinical(cl)
+deactivate CO
+deactivate CTRL
+
+UI- -> ADM: inform operation success
+deactivate ADM
+@enduml
+
+PlantUML version 1.2021.6beta6(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

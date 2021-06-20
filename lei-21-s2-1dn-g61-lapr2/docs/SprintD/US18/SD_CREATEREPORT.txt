@@ -1,0 +1,38 @@
+@startuml
+autonumber
+
+'hide footbox
+
+
+
+participant ":ManualReportController" as CTRL
+
+
+participant "store1:TestValideStore" as A
+
+
+participant "Test" as T
+
+
+-> CTRL : report = showReport(interval,dHistoricP,re)
+activate CTRL
+CTRL -> A : list = getTestsValids()
+activate A
+
+deactivate A
+loop for each Test in the list
+CTRL -> T : dateValid = getDateValidTest().toYMDString()
+activate T
+deactivate T
+CTRL -> A : cases = covidCasesPerDay(dateValid)
+activate A
+deactivate A
+
+
+end
+
+deactivate CTRL
+
+
+
+@enduml

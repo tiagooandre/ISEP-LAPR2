@@ -1,0 +1,250 @@
+title US17 Sequence Diagram
+actor "Laboratory Coordinator" as r #7dcfff
+
+participant ":TestFileUI" as UI #7dcfff
+participant ":TestFileController" as ctc #7dcfff
+participant "CSVReader" as csv #7dcfff
+
+
+participant ":Company" as c #7dcfff
+
+participant "Store:TestStore" as ts #7dcfff
+
+participant "Store2:ClientStore" as cs #7dcfff
+
+participant "Store3: TestTypeStore" as tts #7dcfff
+
+participant "Store4: ParameterCategoryStore" as pcs #7dcfff
+
+participant "Store5: ParameterStore" as ps #7dcfff
+
+participant "t: Test" as t #7dcfff
+
+participant "c: Client" as cl #7dcfff
+
+participant ": GeneratePassword" as gp #7dcfff
+
+participant ": AuthFacade" as auth #7dcfff
+
+participant ": userStore" as user #7dcfff
+
+participant ": User" as u #7dcfff
+
+participant "Store6: TestValideStore" as tv #7dcfff
+
+
+r->UI: 1: add tests from file
+activate UI #7dcfff
+
+r<--UI: 2: request data(fileName)
+deactivateafter UI
+
+r->UI: 3: types requested data
+activate UI #7dcfff
+
+loop Gets the test from each line
+
+UI->ctc: 4: getTestLine(fileName, line)
+activate ctc #7dcfff
+
+ctc->csv: 5: line[] = createTestFromFile(fileName, line)
+activate csv #7dcfff
+deactivateafter csv
+deactivateafter ctc
+
+UI->ctc: 6: validCode()
+activate ctc #7dcfff
+
+ctc->c: 7: store = getTestStore()
+activate c #7dcfff
+deactivateafter c
+
+ctc->ts: 8: getTestByNHS(line[1])
+activate ts #7dcfff
+deactivateafter ts
+
+ctc->*t: 9: create(line[1])
+
+ctc->t: 10: setCode(line[0])
+activate t #7dcfff
+deactivateafter t
+deactivateafter ctc
+
+UI->ctc: 11: validClient()
+activate ctc #7dcfff
+
+ctc->c: 12: store2 = getClientStore()
+activate c #7dcfff
+deactivateafter c
+
+ctc->cs: 13: client = getClientByTIN(line[5])
+activate cs #7dcfff
+deactivateafter cs
+
+alt client != null
+ctc->t: 20: setClient(c)
+activate t #7dcfff
+deactivateafter t
+
+
+else client == null
+ctc->*cl: 14: create(line[8], line[3], line[6], line[4], line[5], line[9], line[7])
+
+ctc->gp: 15: ps = generatePassword()
+activate gp #7dcfff
+deactivateafter gp
+
+ctc->c: 16: getAuthFacade()
+activate c #7dcfff
+
+c->auth: 17: createUser(line[8], line[9], ps)
+activate auth #7dcfff
+
+deactivateafter c
+
+auth->user: 18: createUser(line[8], line[9], ps)
+activate user #7dcfff
+deactivateafter auth
+
+user->*u: 19: create(line[8], line[9], ps)
+deactivateafter user
+
+ctc->t: 20: setClient(c)
+activate t #7dcfff
+deactivateafter t
+end
+deactivateafter ctc
+
+UI->ctc: 21: validTestType()
+activate ctc #7dcfff
+
+ctc->c: 22: store3 = getTestTypeStore()
+activate c #7dcfff
+deactivateafter c
+
+alt line[11]=Blood
+ctc->tts: 23: testType = getTestTypeById("tt002")
+activate tts #7dcfff
+deactivateafter tts
+
+else line[11]=Covid
+ctc->tts: 23: testType = getTestTypeById("tt001")
+activate tts #7dcfff
+deactivateafter tts
+end
+
+ctc->t: 24: setTestType(testType)
+activate t #7dcfff
+deactivateafter t
+deactivateafter ctc
+
+UI->ctc: 25: validCategory()
+activate ctc #7dcfff
+
+ctc->c: 26: store4 = getParameterCategoryStore()
+activate c #7dcfff
+deactivateafter c
+
+alt line[12]!="NA"
+ctc->pcs: 27: category = getCategoryByCode("pc002")
+activate pcs #7dcfff
+deactivateafter pcs
+
+else line[19]!="NA"
+ctc->pcs: 27: category = getCategoryByCode("pc001")
+activate pcs #7dcfff
+deactivateafter pcs
+end
+
+ctc->t: 28: setCategory(category)
+activate t #7dcfff
+deactivateafter t
+deactivateafter ctc
+
+
+UI->ctc: 29: validParameter()
+activate ctc #7dcfff
+
+ctc->c: 30: store5 = getParameterStore()
+activate c #7dcfff
+deactivateafter c
+
+alt line[14]!="NA"
+ctc->ps: 31: parameter = getParameterByCode("WBC00")
+activate ps #7dcfff
+deactivateafter ps
+
+ctc->t: 32: addTestParameter(parameter)
+activate t #7dcfff
+deactivateafter t
+
+ctc->t: 33: addTestResult("WBC00", line[14], "metric")
+activate t #7dcfff
+deactivateafter t
+
+else line[15]!="NA"
+ctc->ps: 31: parameter = getParameterByCode("PLT00")
+activate ps #7dcfff
+deactivateafter ps
+
+ctc->t: 32: addTestParameter(parameter)
+activate t #7dcfff
+deactivateafter t
+
+ctc->t: 33: addTestResult("PLT00", line[15], "metric")
+activate t #7dcfff
+deactivateafter t
+
+else line[16]!="NA"
+ctc->ps: 31: parameter = getParameterByCode("RBC00")
+activate ps #7dcfff
+deactivateafter ps
+
+ctc->t: 32: addTestParameter(parameter)
+activate t #7dcfff
+deactivateafter t
+
+ctc->t: 33: addTestResult("RBC00", line[16], "metric")
+activate t #7dcfff
+deactivateafter t
+
+
+else line[20]!="NA"
+ctc->ps: 31: parameter = getParameterByCode("IgGAN")
+activate ps #7dcfff
+deactivateafter ps
+
+ctc->t: 32: addTestParameter(parameter)
+activate t #7dcfff
+deactivateafter t
+
+ctc->t: 33: addTestResult("IgGAN", line[20], "metric")
+activate t #7dcfff
+deactivateafter t
+end
+
+deactivateafter ctc
+
+UI->ctc: 34: validDateTime() 
+activate ctc #7dcfff
+
+ctc->t: 35: setDateTimeAll(line[21].substring(0,10), line[22].substring(0,10), line[23].substring(0,10), line[24].substring(0,10), line[21].substring(11), line[22].substring(11), line[23].substring(11), line[24].substring(11))
+activate t #7dcfff
+deactivateafter t
+deactivateafter ctc
+
+UI->ctc: 36: addCreatedTest()
+activate ctc #7dcfff
+
+ctc->c: 37: store6 = getTestVStore()
+activate c #7dcfff
+deactivateafter c
+
+ctc->tv: 38: saveTestVali(t)
+activate tv #7dcfff
+deactivateafter tv
+
+end
+
+ctc-->UI: informs which tests were added and which had invalid attributes
+deactivateafter ctc

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="697px" preserveAspectRatio="none" style="width:1005px;height:697px;background:#FFFFFF;" version="1.1" viewBox="0 0 1005 697" width="1005px" zoomAndPan="magnify"><defs><filter height="300%" id="fnok6pdv31of1" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="564.7891" style="stroke:#A80036;stroke-width:1.0;" width="10" x="115" y="71.4297"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="342.5" y="570.0859"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="784.5" y="229.125"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="784.5" y="288.2578"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="784.5" y="347.3906"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="784.5" y="406.5234"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="784.5" y="465.6563"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="904" y="169.9922"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="476.3594" style="stroke:#000000;stroke-width:2.0;" width="953.5" x="37.5" y="131.7266"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="119.5" x2="119.5" y1="40.2969" y2="654.2188"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="347" x2="347" y1="112.0781" y2="654.2188"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="667" x2="667" y1="536.3047" y2="654.2188"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="789" x2="789" y1="40.2969" y2="654.2188"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="909" x2="909" y1="40.2969" y2="654.2188"/><rect fill="#FEFECE" filter="url(#fnok6pdv31of1)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="141" x="47.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="54.5" y="24.9951">:ValidTestMapper</text><rect fill="#FEFECE" filter="url(#fnok6pdv31of1)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="141" x="47.5" y="653.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="54.5" y="673.2139">:ValidTestMapper</text><rect fill="#FEFECE" filter="url(#fnok6pdv31of1)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="265" x="213" y="653.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="251" x="220" y="673.2139">testDateDTO: List&lt;TestDateDTO&gt;</text><rect fill="#FEFECE" filter="url(#fnok6pdv31of1)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="146" x="592" y="653.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="599" y="673.2139">dto: TestDateDTO</text><rect fill="#FEFECE" filter="url(#fnok6pdv31of1)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="71" x="752" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="759" y="24.9951">t1: Test</text><rect fill="#FEFECE" filter="url(#fnok6pdv31of1)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="71" x="752" y="653.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="759" y="673.2139">t1: Test</text><rect fill="#FEFECE" filter="url(#fnok6pdv31of1)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="140" x="837" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="844" y="24.9951">tests: List&lt;Test&gt;</text><rect fill="#FEFECE" filter="url(#fnok6pdv31of1)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="140" x="837" y="653.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="844" y="673.2139">tests: List&lt;Test&gt;</text><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="564.7891" style="stroke:#A80036;stroke-width:1.0;" width="10" x="115" y="71.4297"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="342.5" y="570.0859"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="784.5" y="229.125"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="784.5" y="288.2578"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="784.5" y="347.3906"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="784.5" y="406.5234"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="784.5" y="465.6563"/><rect fill="#FFFFFF" filter="url(#fnok6pdv31of1)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="904" y="169.9922"/><polygon fill="#A80036" points="103,67.4297,113,71.4297,103,75.4297,107,71.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="0" x2="109" y1="71.4297" y2="71.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="7" y="66.3638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83" x="20" y="66.3638">toDTO(tests)</text><polygon fill="#A80036" points="201,96.5625,211,100.5625,201,104.5625,205,100.5625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="125" x2="207" y1="100.5625" y2="100.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="132" y="95.4966">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="51" x="145" y="95.4966">create()</text><rect fill="#FEFECE" filter="url(#fnok6pdv31of1)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="265" x="213" y="79.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="251" x="220" y="99.4248">testDateDTO: List&lt;TestDateDTO&gt;</text><path d="M37.5,131.7266 L115.5,131.7266 L115.5,138.7266 L105.5,148.7266 L37.5,148.7266 L37.5,131.7266 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="476.3594" style="stroke:#000000;stroke-width:2.0;" width="953.5" x="37.5" y="131.7266"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="33" x="52.5" y="144.7935">loop</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="158" x="130.5" y="143.937">[for each Test in tests]</text><polygon fill="#A80036" points="892,165.9922,902,169.9922,892,173.9922,896,169.9922" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="125" x2="898" y1="169.9922" y2="169.9922"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="8" x="132" y="164.9263">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="93" x="144" y="164.9263">t1 = getTest(i)</text><polygon fill="#A80036" points="772.5,225.125,782.5,229.125,772.5,233.125,776.5,229.125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="125" x2="778.5" y1="229.125" y2="229.125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="132" y="224.0591">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="109" x="145" y="224.0591">checkTestState()</text><polygon fill="#A80036" points="772.5,284.2578,782.5,288.2578,772.5,292.2578,776.5,288.2578" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="125" x2="778.5" y1="288.2578" y2="288.2578"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="132" y="283.1919">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="205" x="145" y="283.1919">dateSample = getDateSample()</text><polygon fill="#A80036" points="772.5,343.3906,782.5,347.3906,772.5,351.3906,776.5,347.3906" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="125" x2="778.5" y1="347.3906" y2="347.3906"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="132" y="342.3247">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="333" x="145" y="342.3247">dateChemicalAnalysis = getDateChemicalAnalysis()</text><polygon fill="#A80036" points="772.5,402.5234,782.5,406.5234,772.5,410.5234,776.5,406.5234" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="125" x2="778.5" y1="406.5234" y2="406.5234"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="132" y="401.4575">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="233" x="145" y="401.4575">dateDiagnosis = getDateDiagnosis()</text><polygon fill="#A80036" points="772.5,461.6563,782.5,465.6563,772.5,469.6563,776.5,465.6563" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="125" x2="778.5" y1="465.6563" y2="465.6563"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="132" y="460.5903">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="140" x="145" y="460.5903">testCode = getCode()</text><polygon fill="#A80036" points="580,520.7891,590,524.7891,580,528.7891,584,524.7891" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="125" x2="586" y1="524.7891" y2="524.7891"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="132" y="519.7231">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="430" x="145" y="519.7231">create(testCode,dateSample,dateChemicalAnalysis,dateDiagnosis)</text><rect fill="#FEFECE" filter="url(#fnok6pdv31of1)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="146" x="592" y="503.6563"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="599" y="523.6514">dto: TestDateDTO</text><polygon fill="#A80036" points="330.5,566.0859,340.5,570.0859,330.5,574.0859,334.5,570.0859" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="125" x2="336.5" y1="570.0859" y2="570.0859"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="19" x="132" y="565.02">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="155" y="565.02">add(dto)</text><polygon fill="#A80036" points="11,632.2188,1,636.2188,11,640.2188,7,636.2188" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="5" x2="119" y1="636.2188" y2="636.2188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="17" y="631.1528">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="39" y="631.1528">test1DTO</text><!--MD5=[00708f94a4a55215f083af58da6b1019]
+@startuml
+autonumber
+'hide footbox
+
+
+participant ":ValidTestMapper" as M
+participant "testDateDTO: List<TestDateDTO>" as D
+participant "dto: TestDateDTO" as D1
+participant "t1: Test" as T
+participant "tests: List<Test>" as L
+-> M : toDTO(tests)
+activate M
+M - -> D**:create()
+loop for each Test in tests 
+
+        M -> L : t1 = getTest(i)
+        activate L
+        deactivate L
+        M -> T : checkTestState()
+        activate T
+        deactivate T
+        M -> T : dateSample = getDateSample()
+        activate T
+        deactivate T
+        M -> T: dateChemicalAnalysis = getDateChemicalAnalysis()
+        activate T
+        deactivate T
+        M -> T : dateDiagnosis = getDateDiagnosis()
+        activate T
+        deactivate T
+        M -> T : testCode = getCode()
+        activate T
+        deactivate T
+        M -> D1** : create(testCode,dateSample,dateChemicalAnalysis,dateDiagnosis)
+        
+        M -> D : add(dto)
+        activate D
+        deactivate D
+    end
+<- M : test1DTO
+deactivate M
+@enduml
+
+@startuml
+autonumber
+
+
+participant ":ValidTestMapper" as M
+participant "testDateDTO: List<TestDateDTO>" as D
+participant "dto: TestDateDTO" as D1
+participant "t1: Test" as T
+participant "tests: List<Test>" as L
+-> M : toDTO(tests)
+activate M
+M - -> D**:create()
+loop for each Test in tests 
+
+        M -> L : t1 = getTest(i)
+        activate L
+        deactivate L
+        M -> T : checkTestState()
+        activate T
+        deactivate T
+        M -> T : dateSample = getDateSample()
+        activate T
+        deactivate T
+        M -> T: dateChemicalAnalysis = getDateChemicalAnalysis()
+        activate T
+        deactivate T
+        M -> T : dateDiagnosis = getDateDiagnosis()
+        activate T
+        deactivate T
+        M -> T : testCode = getCode()
+        activate T
+        deactivate T
+        M -> D1** : create(testCode,dateSample,dateChemicalAnalysis,dateDiagnosis)
+        
+        M -> D : add(dto)
+        activate D
+        deactivate D
+    end
+<- M : test1DTO
+deactivate M
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 12:40:07 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,36 @@
+@startuml
+autonumber
+'hide footbox
+
+
+
+
+
+
+
+
+participant "cl:Client" as C
+
+participant "App" as A
+participant "<<Interface>> sa:SortingAl" as SA
+
+participant "Collections" as COL
+
+-> C : sorting(listC)
+activate C
+C -> A : sa=sort1()
+activate A
+A -> SA: compare(o1,o2)
+activate SA
+deactivate SA
+
+deactivate A
+C-> COL:sort(listC,sa)
+activate COL
+deactivate COL
+
+
+
+deactivate C
+
+@enduml

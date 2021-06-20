@@ -1,0 +1,211 @@
+title US4 Sequence Diagram
+actor "Receptionist" as r #7dcfff
+
+participant ":RegisterTestUI" as UI #7dcfff
+participant ":CreateTestController" as ctc #7dcfff
+
+participant ":Company" as c #7dcfff
+
+participant "Store:TestStore" as ts #7dcfff
+
+participant "Store2:ClientStore" as cs #7dcfff
+participant "t: Test" as t #7dcfff
+
+participant "Store3: TestTypeStore" as tts #7dcfff
+participant "ttMapper: TestTypeMapper" as ttm #7dcfff
+participant "testTypes: List<TestType>" as ttp #7dcfff
+participant "testTypesDTO: List<TestTypeDTO>" as ttpD #7dcfff
+
+participant "tt: TestType" as tt #7dcfff
+
+participant "cMapper: CategoryMapper" as cm #7dcfff
+participant "testTypeCategories: List<ParameterCategory>" as ic #7dcfff
+participant "categoriesDTO: List<ParameterCategoryDTO>" as icD #7dcfff
+
+participant "Store4: ParameterCategoryStore" as pcs #7dcfff
+participant "pc: ParameterCategory" as pc #7dcfff
+
+participant "pMapper: ParameterMapper" as pm #7dcfff
+participant "parameterList: List<Parameter>" as pcl #7dcfff
+participant "parametersDTO: List<ParameterDTO>" as pcD #7dcfff
+
+participant "Store5: ParameterStore" as ps #7dcfff
+
+
+r->UI: 1: register new test
+activate UI #7dcfff
+
+r<--UI: 2: request data(testNHScode, clientTIN)
+deactivateafter UI
+
+r->UI: 3: types requested data
+activate UI #7dcfff
+
+UI->ctc: 4: createTest(testNHScode, clientTIN)
+activate ctc #7dcfff
+
+ctc->c: 5: store = getTestStore()
+activate c #7dcfff
+deactivateafter c
+
+ctc->ts: 6: t = createTest(testNHScode)
+activate ts #7dcfff
+
+ts->*t: 7: create(testNHScode)
+deactivateafter ts
+
+ctc->c: 8: store2 = getClientStore()
+activate c #7dcfff
+deactivateafter c
+
+ctc->cs: 9: c = getClientByTIN(clientTIN)
+activate cs #7dcfff
+deactivateafter cs
+
+ctc->t: 10: setClient(c)
+activate t #7dcfff
+deactivateafter t
+deactivateafter ctc
+
+UI->ctc:11: testTypesDTO = getTestTypes()
+
+activate ctc #7dcfff
+ctc->c: 12: store3 = getTestTypeStore()
+activate c #7dcfff
+deactivateafter c
+
+ctc->tts: 13: testTypes = getAllTestTypes()
+activate tts #7dcfff
+deactivateafter tts
+
+ctc->ttm: 14: toTestTypesDTO(testTypes)
+activate ttm #7dcfff
+
+ref over ttm: SD_TestTypeMapper_toDTO_List
+
+ctc<--ttm: 15: testTypesDTO
+deactivateafter ttm
+deactivateafter ctc
+
+UI-->r: 16: shows list of test types to choose from
+deactivateafter UI
+
+r->UI: 17: select test type
+activate UI #7dcfff
+
+UI->ctc: 18: setTestType(testTypeCode)
+activate ctc #7dcfff
+
+ctc->tts: 19: tt = getTestTypeById(testTypeCode)
+activate tts #7dcfff
+deactivateafter tts
+
+
+ctc->t: 20: setTestType(tt)
+activate t #7dcfff
+deactivateafter t
+deactivateafter ctc
+
+UI->ctc: 21: categoryDTO = getCategories()
+activate ctc #7dcfff
+
+ctc->tt: 22: testTypeCategories = getCategories()
+activate tt #7dcfff
+deactivateafter tt
+
+ctc->cm: 23: toCategoriesDTO(testTypeCategories)
+activate cm #7dcfff
+
+ref over cm: SD_CategoryMapper_toDTO_List
+
+cm-->ctc: 24: categoriesDTO
+deactivateafter cm
+deactivateafter ctc
+
+UI-->r: 25: shows the list of categories to choose from
+deactivateafter UI
+
+r->UI: 26: select category
+activate UI #7dcfff
+
+UI->ctc: 27: setCategory(categoryCode)
+activate ctc #7dcfff
+
+ctc->c: 28: store4 = ParameterCategoryStore()
+activate c #7dcfff
+deactivateafter c
+
+ctc->pcs: 29: pc = getCategoryByCode
+activate pcs #7dcfff
+deactivateafter pcs
+
+ctc->t: 30: setCategory(pc)
+activate t #7dcfff
+deactivateafter t
+deactivateafter ctc
+
+UI->ctc: 31: parameterDTO()
+activate ctc #7dcfff
+
+ctc->pc: 32: parameterList=getParameters()
+activate pc #7dcfff
+deactivateafter pc
+
+ctc->pm: 33:toParameterDTO(parameterList)
+activate pm #7dcfff
+
+ref over pm: SD_ParameterMapper_toDTO_List
+
+pm-->ctc: 34: parametersDTO
+deactivate pm
+
+deactivateafter ctc
+
+UI-->r: 35: shows the list of parameters to choose from
+deactivateafter UI
+
+loop Select parameters
+r->UI: 36: select parameter(s)
+activate UI #7dcfff
+
+UI->ctc: 37: addParameter(parameterCode)
+activate ctc #7dcfff
+
+ctc->c: 38: store5 =ParameterStore()
+activate c #7dcfff
+deactivateafter c
+
+ctc->ps: 39: p = getParameterByCode(parameterCode)
+activate ps #7dcfff
+deactivateafter ps
+
+ctc->t: 40: addParameter(p)
+activate t #7dcfff
+deactivateafter t
+
+deactivateafter ctc
+deactivate UI
+end 
+
+activate UI #7dcfff
+UI-->r: 41: shows data and request confirmation
+deactivateafter UI
+
+r->UI: 42: confirms the data
+activate UI #7dcfff
+
+UI->ctc: 43: saveTest()
+activate ctc #7dcfff
+
+ctc->ts: 44: saveTest(t)
+activate ts #7dcfff
+
+ts->ts: 45: validateTest(t)
+activate ts #7dcfff
+deactivateafter ts #7dcfff
+
+ts->ts: 46: saveTest(t)
+activate ts #7dcfff
+deactivateafter ts #7dcfff
+
+UI->r: 47: informs operation success

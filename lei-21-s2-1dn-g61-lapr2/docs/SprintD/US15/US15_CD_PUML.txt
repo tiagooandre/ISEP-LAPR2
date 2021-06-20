@@ -1,0 +1,68 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class ValidatingWorkController {
+  -TestValideStore store1
+  -TestStore store
+  -Company company
+  -Test t1
+  -Client cl
+  +getTests()
+  +validateTest(code)
+  +addTest() 
+  +sendEmail(cl)
+  +getClient()
+  +show()
+}
+class ValidatingWorkUI{
+}
+class Test {
+  +getClient()
+  +SetDateValidateTest()
+  +SetTimeValidateTest()
+}
+class Company {
+  -String designation
+  +getTestValideStore()
+  +getTestStore()
+}
+class Client {
+}
+class EmailNotification{
+  +sendEmailToClient(message)
+}
+class TestValideStore {
+  -List<Test> testValideList
+  +validateValide(t1)
+  +addValide(t1)
+}
+class TestStore{
+  +getTests()
+  +getTestByCode(code)
+}
+class ValidTestMapper{
+  +toDTO(tests)
+}
+class TestDateDTO{
+  -String testCode
+  -String dateDiagnosis
+  -String dateChemAnalysis
+  -String dateSample
+}
+
+ValidatingWorkUI ..> ValidatingWorkController
+ValidatingWorkController ..> EmailNotification
+ValidatingWorkController ..> Company
+Company "1" --> "1" TestStore: has >
+Company "1" --> "1" TestValideStore: has >
+TestStore "1" --> "*" Test: contains >
+ValidatingWorkController ..> TestDateDTO
+ValidatingWorkUI ..> TestDateDTO
+ValidTestMapper ..> TestDateDTO
+ValidTestMapper ..> Test
+Client "1" --> "1" EmailNotification: has >
+Test "1" --> "1" Client: is form > 
+TestValideStore "1" --> "*" Test: uses >
+
+
+@enduml

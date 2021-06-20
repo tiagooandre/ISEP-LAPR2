@@ -1,0 +1,64 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class CheckResultController {
+  -TestValideStore store1
+  -Company company
+  -Test t
+  -Client c
+  
+  +sortList()
+  +showSort(List<Client> cl)
+  +getTestFromCL(Client cl)
+  +convert(List<Client> cl)
+  +convert2(List<Test> listCT)
+  +showTest(List<Test> listCT)
+}
+class CheckResultUI{
+}
+class Test {
+  +getClient()
+
+}
+class Company {
+  -String designation
+  +getTestValideStore()
+}
+class Client {
+  +sorting(List<Client> listC)
+  +getLstTestComplete();
+}
+
+class TestValideStore {
+  +getTestsValids()
+
+}
+
+class App{
+  +getCompany()
+  +sort1()
+}
+Interface SortingAl{
+  +compare(o1,o2)
+}
+class SortingName{
+  +compare(o1,o2)
+ }
+ class SortingTIN{
+  +compare(o1,o2)
+ }
+
+CheckResultUI ..> CheckResultController
+CheckResultController ..> Company
+CheckResultController ..> App
+Company "1" --> "1" TestValideStore: has >
+Test "1..*" --> "1" Client: is from > 
+TestValideStore "1" --> "*" Test: contains >
+App "1" --> "1"  SortingAl: uses >
+SortingAl "1" <|-- "1" SortingName
+SortingAl "1" <|-- "1" SortingTIN
+
+
+
+
+@enduml

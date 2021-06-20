@@ -1,0 +1,2 @@
+Test_Code;NHS_Code;Lab_ID;CitizenCard_Number;NHS_Number;TIN;BirthDay;PhoneNumber;Name;E-mail ;Address;TestType;Category;HB000;WBC00;PLT00;RBC00;Category;HDL00;Category;IgGAN;Test_Reg_DateHour;Test_Chemical_DateHour;Test_Doctor_DateHour;Test_Validation_DateHour
+000000000001;PXS000003196;001DO;0000000000003196;6000003196;2100003196;03/11/1946;91200003196;Georgia PEDDIE;GeorgiaPEDDIE2155@gmail.com;115 Street of England 23 Dorchester  DO 86 GO;Covid;NA;NA;NA;NA;NA;NA;NA;Covid;0,1;22/03/2021 08:00;22/03/2021 14:22;22/03/2021 16:25;22/03/2021 18:52

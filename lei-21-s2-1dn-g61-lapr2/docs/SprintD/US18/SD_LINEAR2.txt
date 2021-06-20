@@ -1,0 +1,34 @@
+@startuml
+autonumber
+
+'hide footbox
+
+
+
+participant ":ManualReportController" as CTRL
+participant ":Company" as C
+
+participant "store2:RegisterClientStore" as S
+
+
+
+participant "linear:LinearClass" as L
+
+-> CTRL : re= create2()
+
+activate CTRL
+CTRL -> C : store2 = getRegisterClientStore()
+activate C
+deactivate C
+CTRL -> S : mean = meanAge()
+activate S
+deactivate S
+CTRL -> L : setvariable(total)
+activate L
+L --> L :create(total)
+deactivate L
+
+deactivate CTRL
+@enduml
+
+

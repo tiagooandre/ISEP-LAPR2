@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="322px" preserveAspectRatio="none" style="width:840px;height:322px;background:#FFFFFF;" version="1.1" viewBox="0 0 840 322" width="840px" zoomAndPan="magnify"><defs><filter height="300%" id="f6gp61eo6vwiv" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f6gp61eo6vwiv)" height="182.5313" style="stroke:#A80036;stroke-width:1.0;" width="10" x="118" y="71.4297"/><rect fill="#FFFFFF" filter="url(#f6gp61eo6vwiv)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="373" y="100.5625"/><rect fill="#FFFFFF" filter="url(#f6gp61eo6vwiv)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="535" y="159.6953"/><rect fill="#FFFFFF" filter="url(#f6gp61eo6vwiv)" height="35.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="723" y="218.8281"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="123" x2="123" y1="40.2969" y2="278.9609"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="377.5" x2="377.5" y1="40.2969" y2="278.9609"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="539.5" x2="539.5" y1="40.2969" y2="278.9609"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="727.5" x2="727.5" y1="40.2969" y2="278.9609"/><rect fill="#FEFECE" filter="url(#f6gp61eo6vwiv)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="192" x="25" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="32" y="24.9951">:ManualReportController</text><rect fill="#FEFECE" filter="url(#f6gp61eo6vwiv)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="192" x="25" y="277.9609"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="32" y="297.9561">:ManualReportController</text><rect fill="#FEFECE" filter="url(#f6gp61eo6vwiv)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="87" x="332.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="339.5" y="24.9951">:Company</text><rect fill="#FEFECE" filter="url(#f6gp61eo6vwiv)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="87" x="332.5" y="277.9609"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="339.5" y="297.9561">:Company</text><rect fill="#FEFECE" filter="url(#f6gp61eo6vwiv)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="209" x="433.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195" x="440.5" y="24.9951">store2:RegisterClientStore</text><rect fill="#FEFECE" filter="url(#f6gp61eo6vwiv)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="209" x="433.5" y="277.9609"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195" x="440.5" y="297.9561">store2:RegisterClientStore</text><rect fill="#FEFECE" filter="url(#f6gp61eo6vwiv)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="139" x="656.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="663.5" y="24.9951">linear:LinearClass</text><rect fill="#FEFECE" filter="url(#f6gp61eo6vwiv)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="139" x="656.5" y="277.9609"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="663.5" y="297.9561">linear:LinearClass</text><rect fill="#FFFFFF" filter="url(#f6gp61eo6vwiv)" height="182.5313" style="stroke:#A80036;stroke-width:1.0;" width="10" x="118" y="71.4297"/><rect fill="#FFFFFF" filter="url(#f6gp61eo6vwiv)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="373" y="100.5625"/><rect fill="#FFFFFF" filter="url(#f6gp61eo6vwiv)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="535" y="159.6953"/><rect fill="#FFFFFF" filter="url(#f6gp61eo6vwiv)" height="35.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="723" y="218.8281"/><polygon fill="#A80036" points="106,67.4297,116,71.4297,106,75.4297,110,71.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="0" x2="112" y1="71.4297" y2="71.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="7" y="66.3638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="86" x="20" y="66.3638">re= create2()</text><polygon fill="#A80036" points="361,96.5625,371,100.5625,361,104.5625,365,100.5625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="128" x2="367" y1="100.5625" y2="100.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="135" y="95.4966">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="213" x="148" y="95.4966">store2 = getRegisterClientStore()</text><polygon fill="#A80036" points="523,155.6953,533,159.6953,523,163.6953,527,159.6953" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="128" x2="529" y1="159.6953" y2="159.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="8" x="135" y="154.6294">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="127" x="147" y="154.6294">mean = meanAge()</text><polygon fill="#A80036" points="711,214.8281,721,218.8281,711,222.8281,715,218.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="128" x2="717" y1="218.8281" y2="218.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="135" y="213.7622">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="110" x="148" y="213.7622">setvariable(total)</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="733" x2="775" y1="252.9609" y2="252.9609"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="775" x2="775" y1="252.9609" y2="265.9609"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="728" x2="775" y1="265.9609" y2="265.9609"/><polygon fill="#A80036" points="738,261.9609,728,265.9609,738,269.9609,734,265.9609" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="740" y="247.895">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80" x="753" y="247.895">create(total)</text><!--MD5=[09c328dced7f16e2c20e389a4b72848f]
+@startuml
+autonumber
+
+'hide footbox
+
+
+
+participant ":ManualReportController" as CTRL
+participant ":Company" as C
+
+participant "store2:RegisterClientStore" as S
+
+
+
+participant "linear:LinearClass" as L
+
+-> CTRL : re= create2()
+
+activate CTRL
+CTRL -> C : store2 = getRegisterClientStore()
+activate C
+deactivate C
+CTRL -> S : mean = meanAge()
+activate S
+deactivate S
+CTRL -> L : setvariable(total)
+activate L
+L - -> L :create(total)
+deactivate L
+
+deactivate CTRL
+@enduml
+
+@startuml
+autonumber
+
+
+
+
+participant ":ManualReportController" as CTRL
+participant ":Company" as C
+
+participant "store2:RegisterClientStore" as S
+
+
+
+participant "linear:LinearClass" as L
+
+-> CTRL : re= create2()
+
+activate CTRL
+CTRL -> C : store2 = getRegisterClientStore()
+activate C
+deactivate C
+CTRL -> S : mean = meanAge()
+activate S
+deactivate S
+CTRL -> L : setvariable(total)
+activate L
+L - -> L :create(total)
+deactivate L
+
+deactivate CTRL
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 12:40:07 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

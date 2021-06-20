@@ -1,0 +1,33 @@
+@startuml
+autonumber
+
+'hide footbox
+
+
+
+participant ":ManualReportController" as CTRL
+participant ":Company" as C
+
+participant "store1:TestValideStore" as A
+
+
+
+participant "linear:LinearClass" as L
+
+-> CTRL : re= create1()
+
+activate CTRL
+CTRL -> C : store1 = getTestValideStore()
+activate C
+deactivate C
+CTRL -> A : total = totalCases()
+activate A
+deactivate A
+CTRL -> L : setvariable(total)
+activate L
+L --> L :create(total)
+deactivate L
+deactivate CTRL
+@enduml
+
+

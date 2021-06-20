@@ -1,0 +1,47 @@
+@startuml
+autonumber
+'hide footbox
+
+
+participant ":ValidTestMapper" as M
+participant "testDateDTO: List<TestDateDTO>" as D
+participant "dto: TestDateDTO" as D1
+participant "t1: Test" as T
+participant "tests: List<Test>" as L
+-> M : toDTO(tests)
+activate M
+M --> D**:create()
+loop for each Test in tests 
+
+        M -> L : t1 = getTest(i)
+        activate L
+        deactivate L
+        M -> T : checkTestState()
+        activate T
+        deactivate T
+        M -> T : dateSample = getDateSample()
+        activate T
+        deactivate T
+        M -> T: dateChemicalAnalysis = getDateChemicalAnalysis()
+        activate T
+        deactivate T
+        M -> T : dateDiagnosis = getDateDiagnosis()
+        activate T
+        deactivate T
+        M -> T : testCode = getCode()
+        activate T
+        deactivate T
+        M -> D1** : create(testCode,dateSample,dateChemicalAnalysis,dateDiagnosis)
+        
+        M -> D : add(dto)
+        activate D
+        deactivate D
+    end
+<- M : test1DTO
+deactivate M
+
+
+
+
+
+@enduml

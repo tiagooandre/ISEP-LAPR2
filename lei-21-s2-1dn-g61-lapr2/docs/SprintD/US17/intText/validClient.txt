@@ -1,0 +1,70 @@
+title validClient
+
+
+participant ":TestFileController" as ctc #7dcfff
+participant "CSVReader" as csv #7dcfff
+
+
+participant ":Company" as c #7dcfff
+
+
+participant "Store2:ClientStore" as cs #7dcfff
+
+
+
+
+participant "t: Test" as t #7dcfff
+
+participant "c: Client" as cl #7dcfff
+
+participant ": GeneratePassword" as gp #7dcfff
+
+participant ": AuthFacade" as auth #7dcfff
+
+participant ": userStore" as user #7dcfff
+
+participant ": User" as u #7dcfff
+
+
+
+ctc->c: 12: store2 = getClientStore()
+activate ctc #7dcfff
+activate c #7dcfff
+deactivateafter c
+
+ctc->cs: 13: client = getClientByTIN(line[5])
+activate cs #7dcfff
+deactivateafter cs
+
+alt client != null
+ctc->t: 20: setClient(c)
+activate t #7dcfff
+deactivateafter t
+
+
+else client == null
+ctc->*cl: 14: create(line[8], line[3], line[6], line[4], line[5], line[9], line[7])
+
+ctc->gp: 15: ps = generatePassword()
+activate gp #7dcfff
+deactivateafter gp
+
+ctc->c: 16: getAuthFacade()
+activate c #7dcfff
+
+c->auth: 17: createUser(line[8], line[9], ps)
+activate auth #7dcfff
+
+deactivateafter c
+
+auth->user: 18: createUser(line[8], line[9], ps)
+activate user #7dcfff
+deactivateafter auth
+
+user->*u: 19: create(line[8], line[9], ps)
+deactivateafter user
+
+ctc->t: 20: setClient(c)
+activate t #7dcfff
+deactivateafter t
+end

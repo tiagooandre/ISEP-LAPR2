@@ -1,0 +1,58 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class ClinicalAnalysisLaboratory {
+  -String laboratoryID
+  -String name
+  -String adress
+  -int phoneNumber
+  -int numberTIN
+  +create(laboratoryID,name,adress,phoneNumber,numberTIN)
+}
+class RegisterClinicalStore{
+   -clinicalList()
+   +createClinical(laboratoryID,name,phoneNumber,numberTIN,adress)
+   +validateClinical(cl)
+   +saveClinical(cl)
+   +existsSame(cl)
+  
+}
+
+class TestType {
+  -String id
+  -String description
+  +getTestType()
+}
+
+
+class Company {
+  -String designation
+  -testTypeList()
+  -clinicalList()
+  +getRegisterClinicalStore()
+  +getTestTypes()
+}
+
+class RegisterClinicalAnalysisLaboratoryController {
+  -Company company
+  -RegisterClinicalStore store
+  -ClinicalAnalysisLaboratory cl
+  +fillTestTypeList()
+  +testList()
+  +createClinical(laboratoryID,name,phoneNumber,numberTIN,adress)
+  +saveClinicalAnalysisLaboratory()
+}
+
+class RegisterClinicalAnalysisLaboratoryUI {
+
+}
+
+RegisterClinicalAnalysisLaboratoryUI ..> RegisterClinicalAnalysisLaboratoryController
+RegisterClinicalAnalysisLaboratoryController ..> Company
+Company  --> RegisterClinicalStore 
+RegisterClinicalStore --> ClinicalAnalysisLaboratory 
+Company --> TestType
+
+
+
+@enduml

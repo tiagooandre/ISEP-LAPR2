@@ -1,0 +1,104 @@
+@startuml
+autonumber
+
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":ManualReportUI" as UI
+participant ":ManualReportController" as CTRL
+participant ":Company" as C
+
+
+participant "store:RegressionStore" as SS
+participant "re:Regression" as RE
+
+
+activate ADM
+ADM -> UI : Starts sending the Report
+activate UI
+
+UI --> ADM : Request data(intervals,dHistoricP,numberX)
+deactivate UI
+ADM -> UI : Types the data 
+activate UI 
+
+UI -> CTRL : listAl = getAlg()
+activate CTRL
+CTRL -> C : store = getRegressionStore()
+activate C
+deactivate C
+
+CTRL -> SS : listAl = getAlist()
+activate SS
+deactivate SS
+
+
+
+
+deactivate CTRL 
+
+
+
+
+
+
+UI --> ADM : asks to choose 1 of 2 algorithms
+
+
+deactivate UI
+
+ADM -> UI : Selects 1 algorithm and an integer(number) to choose the variables(0-multi,1-linear(total),2-linear(mean))
+activate UI
+alt selected Multi && number == 0
+UI -> CTRL:re= create()
+activate CTRL
+
+
+ref over CTRL : SD_MULTI
+CTRL --> UI : 
+
+deactivate CTRL 
+
+else selected Linear && number == 1
+
+UI -> CTRL : re=create1()
+activate CTRL
+ref over CTRL : SD_LINEAR1
+deactivate CTRL
+
+
+else seleted Linear && number == 2
+UI -> CTRL : re =create2()
+activate CTRL
+
+
+ref over CTRL : SD_LINEAR2
+ end
+deactivate CTRL
+UI -> ADM : shows the algorithm with the variable/s
+deactivate UI
+
+ADM-> UI:Creates Report and  sends it to NHS
+activate UI
+
+UI -> CTRL : report = showReport(interval,dHistoricP,re)
+activate CTRL
+ref over CTRL : SD_CREATEREPORT
+CTRL -> UI : 
+deactivate CTRL
+UI -> CTRL : send(report)
+activate CTRL
+ref over CTRL : SD_SEND
+CTRL --> UI :
+deactivate CTRL
+
+UI -> ADM: Informs success of the operation
+deactivate UI
+deactivate ADM
+
+
+
+@enduml
+
+
+

@@ -1,0 +1,26 @@
+title validCode()
+
+participant ":TestFileController" as ctc #7dcfff
+
+participant ":Company" as c #7dcfff
+
+participant "Store:TestStore" as ts #7dcfff
+
+participant "t: Test" as t #7dcfff
+
+activate ctc #7dcfff
+
+ctc->c: 2: store = getTestStore()
+activate c #7dcfff
+deactivateafter c
+
+ctc->ts: 3: getTestByNHS(line[1])
+activate ts #7dcfff
+deactivateafter ts
+
+ctc->*t: 4: create(line[1])
+
+ctc->t: 5: setCode(line[0])
+activate t #7dcfff
+deactivateafter t
+deactivateafter ctc

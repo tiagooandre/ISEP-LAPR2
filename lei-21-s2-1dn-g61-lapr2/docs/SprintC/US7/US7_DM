@@ -1,0 +1,47 @@
+@startuml
+title Relationships - Class Diagram
+
+class Company {
+    string designation;
+}
+
+class Employee {
+    String employeeID;
+    String name;
+    String address;
+    String phoneNumber;
+    String codeSOC;
+}
+
+class SpecialistDoctor {
+    int doctorIndexNumber;
+}
+
+class User {
+  String name;
+}
+
+class OrganizationRole {
+ String id;
+ String description;
+ String className;
+}
+
+class Email {
+ String email;
+}
+
+class Password {
+ String password;
+}
+
+Company "1" -- "*" Employee: has >
+Company "1" -- "*" OrganizationRole: comprehends >
+Employee <|-- SpecialistDoctor
+Employee "0..1" -- "1" User: acts as >
+Employee "*" -- "1" OrganizationRole: has >
+Employee "1" -- "1" Email: has >
+User "1" -- "1" Email: has >
+User "1" -- "1" Password: has >
+
+@enduml

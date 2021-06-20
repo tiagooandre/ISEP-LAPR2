@@ -1,0 +1,27 @@
+title validLab
+
+participant ":TestFileController" as ctc #7dcfff
+
+participant ":Company" as c #7dcfff
+
+participant "Store7:RegisterClinicalStore" as ts #7dcfff
+
+participant "lab: ClinicalAnalysisLaboratory" as l #7dcfff
+
+
+activate ctc #7dcfff
+
+ctc->c: 2: store = getRegisterClinicalStore()
+activate c #7dcfff
+deactivateafter c
+
+ctc->ts: 3: lab = getClinicById(this.testInfo[2])
+activate ts #7dcfff
+deactivateafter ts
+ctc->l: 4: addTest(t)
+
+activate l #7dcfff
+deactivateafter l
+
+
+deactivateafter ctc

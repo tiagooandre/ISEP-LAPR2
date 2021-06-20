@@ -1,0 +1,121 @@
+title US9 Sequence Diagram
+actor Administrator #7dcfff
+
+participant ":CreateParameterCategoryUI" as UI #7dcfff
+participant ":CreateParameterCategoryController" as Controller #7dcfff
+participant ":Company" as Company #7dcfff
+
+
+participant "store: ParameterCategoryStore" as store #7dcfff
+participant "store2: ParameterStore" as store2 #7dcfff
+
+participant "pc ParameterCategory" as TestType #7dcfff
+
+
+
+activate Administrator #7dcfff
+Administrator->UI: 1: starts new parameter category
+
+activate UI #7dcfff
+Administrator<--UI: 1.1: request data(code, designation, nhsID)
+deactivate UI #7dcfff
+
+Administrator->UI: 2: types requested data
+
+activate UI #7dcfff
+UI->Controller: 2.1: createParameterCategory(code, designation, nhsID)
+activate Controller #7dcfff
+
+
+
+Controller->Company: 2.1.1: store=getParameterCategoryStore()
+activate Company #7dcfff
+deactivateafter Company
+
+
+Controller->(0)store:2.1.2: pc = createParameterCategory(code, designation, nhsID)
+activate store #7dcfff
+activate Company#7dcfff
+deactivate Company
+
+
+store-->*TestType : 2.1.2.1: create(code, designation, nhsID)
+deactivate store
+Controller->store: 2.1.3: validateParameterCategory(pc)
+
+
+activate store #7dcfff
+store->store: 2.1.3.1: pcExists(pc)
+activate store #7dcfff
+deactivateafter store #7dcfff
+store-->Controller:2.1.4: result
+deactivateafter store #7dcfff
+deactivateafter Controller
+
+Controller<-UI: 2.2: parameterList()
+activate Controller #7dcfff
+Controller->Company: 2.2.1: store2=getParameterStore() 
+activate Company #7dcfff
+deactivateafter Company
+Controller->store2: 2.2.2: getParameterList()
+activate store2#7dcfff
+store2-->Controller: 2.2.3: result
+deactivateafter store2
+Controller-->UI:2.3: results
+deactivate Controller #7dcfff
+
+Administrator<--UI: 2.4: shows the data and list of parameters to choose from
+deactivate UI #7dcfff
+
+Administrator->UI: 3: select parameter(s)
+
+activate UI #7dcfff
+activate Controller #7dcfff
+
+
+loop 
+UI->Controller: 3.1: fillParameterList(p)
+Controller->TestType: 3.1.2: addParameter(p)
+activate TestType#7dcfff
+deactivateafter TestType
+end
+
+deactivateafter Controller
+
+
+Administrator<--UI: 3.2: request confirmation
+
+deactivateafter UI
+
+Administrator->UI: 4: confirms the data
+
+activate UI #7dcfff
+UI->Controller: 4.1: saveParameterCategory()
+activate Controller #7dcfff
+Controller->store: 4.1.1:  saveParameterCategory(pc)
+activate store #7dcfff
+
+
+
+store->store: 4.1.1.1:  validateParameterCategory(pc)
+activate store #7dcfff
+deactivateafter store #7dcfff
+
+
+store->store: 4.1.1.2: pcExists(pc)
+activate store #7dcfff
+deactivateafter store #7dcfff
+
+store->store: 4.1.1.3:  addParameterCategory(pc)
+activate store #7dcfff
+deactivateafter store #7dcfff
+deactivateafter store #7dcfff
+
+UI->Controller: 4.2: showAllParameterCategory()
+Controller->store: 4.2.1: getParameterCategories()
+activate store#7dcfff
+Controller<--store: 4.2.2: results
+UI<--Controller: 4.3: results
+
+Administrator<--UI: 4.4: informs operation success and shows the list of parameter categories
+deactivate UI #7dcfff

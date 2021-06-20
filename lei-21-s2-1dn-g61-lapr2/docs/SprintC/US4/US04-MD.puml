@@ -1,0 +1,77 @@
+@startuml
+title Relationships - Class Diagram
+
+class Employee{
+    int employeeID;
+    String organizationRole;
+    String name;
+    String adress;
+    int phoneNumber;
+    int codeSOC;
+}
+
+class Receptionist{
+
+}
+
+class Company {
+    String designation;
+}
+
+class Test {
+    String code;
+    String NHSCode;
+    String testResult
+    String dateSample;
+    String timeSmaple;
+    String dateChemAnalysis;
+    String timeChemAnalysis;
+    String dateDiagnosis;
+    String timeDiagnosis;
+    String dateValidTest;
+    String timeValidTest
+}
+
+class TestType {
+    String designation;
+    String code;
+    String collectingMethods;
+}
+
+class Parameter{
+    String designation;
+    String code
+}
+
+class ParameterCategory{
+    String code;
+    String designation;
+    String NHSID;
+}
+
+class Client{
+    String citizenCardNumber;
+    String numberNHS;
+    String numberTIN;
+    String birthDate;
+    String sex;
+    String phoneNumber;
+    String name
+}
+
+Employee <|-- Receptionist
+
+Company "1" -- "*" Test: performs >
+Company "1" -- "+" Employee: has >
+
+Receptionist "1" -- "*" Test: registers a >
+
+Test "1" -- "1" TestType: is of >
+Test "*" -- "1" Client: does a <
+Test "*" -- "1" Client: requested by >
+
+TestType "1" -- "1,*" ParameterCategory: measured by > 
+
+ParameterCategory "1" -- "*" Parameter: presented under <
+
+@enduml

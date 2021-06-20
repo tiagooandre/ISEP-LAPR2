@@ -1,0 +1,102 @@
+@startuml
+title UC16 - Class Diagram
+
+class Company {
+    string designation;
+}
+
+class Employee {
+    String employeeID;
+    String name;
+    String address;
+    String phoneNumber;
+    String codeSOC;
+}
+
+class LaboratoryCoordinator
+
+class User {
+  String name;
+}
+
+class Test {
+    String code;
+    String NHSCode;
+    String description;
+}
+
+class Date {
+   int year;
+   int month;
+   int day;
+}
+
+class Time {
+   int hours;
+   int minutes;
+   int seconds;
+}
+
+class Client {
+    String citizenCardNumber;
+    String numberNHS;
+    String numberTIN;
+    String birthDate;
+    string sex;
+    String phoneNumber;
+    string name;
+}
+
+class TestParameterResult{
+     String value;
+     String metric;
+     Date createdAt;
+}
+
+class Report {
+   String text;
+}
+class Diagnosis {
+   String testResults;
+}
+
+class Validation
+
+class Algorithm
+
+class TestParameter
+
+class CompanyAnalysis
+
+Company "1" -- "*" Employee: has >
+Company "1" -- "*" Test: performs >
+Company "1" -- "*" Client: has >
+Employee <|-- LaboratoryCoordinator
+Employee "0..1" -- "1" User: acts as >
+Client "1" -- "*" Test: does a >
+
+LaboratoryCoordinator "1" -- "*" CompanyAnalysis: sees >
+Company "1" -- "*" CompanyAnalysis: has >
+CompanyAnalysis"1" -- "1" Test: uses >
+CompanyAnalysis"1" -- "1" Client: uses >
+CompanyAnalysis"1" -- "*" Algorithm : uses >
+Test "*" -- "1" Validation: needs >
+Date "*" -- "*" Validation: created after >
+Date "*" -- "*" Diagnosis: created after >
+Date "*" -- "*" TestParameterResult: created after >
+Time"*" -- "*" Validation: created after >
+Time"*" -- "*" Diagnosis: created after >
+Time"*" -- "*" TestParameterResult: created after >
+
+Test "1" -- "1..*" TestParameter: has >
+Test "1" -- "*" Date: has >
+Test "1" -- "*" Time: has >
+TestParameter "1" -- "1" TestParameterResult : has >
+Diagnosis "1" -- "1" TestParameter: created with <
+Client "1" -- "*" TestParameter: consults the >
+Report "1" -- "1" Diagnosis: contains >
+LaboratoryCoordinator "1" -- "*" Report: validates >
+Company "1" -- "*" Report: wants >
+Company "1" -- "*" Algorithm: uses >
+Algorithm "*" -- "*" ExternalModules: can be from >
+@enduml

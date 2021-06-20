@@ -1,0 +1,156 @@
+@startuml
+title UC16 - Class Diagram
+
+class AnalyseOverviewFXMLController
+
+class AnalyseOverviewController {
+ validateUser()
+ calculatesInterval(beginningDate, endDate)
+ getNumberClients()
+ getTestsProcessed()
+ showGraphic()
+}
+
+class StatisticsFXMLController {
+ correctDates()
+ validateDates(beginningDate, endDate)
+ addDataBarChart(texts, listTestsNumber1, listTestsNumber2, listTestsNumber3)
+}
+
+class App {
+    + getCompany()
+    + getCurrentUserSession()
+}
+
+class UserSession {
+    + isLoggedInWithRole(MEDICAL LAB TECHNICIAN)
+}
+
+class StatisticsController {
+ getYearsDate(beginningDate, endDate)
+ getMonthsDate(beginningDate, endDate)
+ getWeeksDate(beginningDate, endDate)
+ getDaysDate(beginningDate, endDate)
+ getNumberTests(beginningDate, arraySize, interval, status)
+}
+
+class ContiguousSubsequence {
+ subSequenceTimeInterval(beginningDate, endDate, listTests);
+ elementsInSequence(beginningDate, endDate)
+ checkInterval(beginningDate, endDate, testDate)
+ generatesSubSequence(sequence)
+ createSequence(beginningDate, endDate, listTests)
+ getNumberRegisteredTests(controlBeginningDate, controlEndDate, listTests, state);
+ findSequenceIndex(sequence, subSequence)
+ calculateDated(sequence, index)
+}
+
+class Date {
+   int year;
+   int month;
+   int day;
+ getYear()
+ getMonth()
+ getDay()
+ datesDay(beginningDate)
+ datesWeek(beginningDate)
+ datesYear(beginningDate)
+ calculateDifference(beginningDate)
+ plusDay(days)
+ plusMonth(months)
+ plusYear(years)
+ datesMonth(beginningDate)
+ compareTo(beginningDate)
+ calculateDifferenceMonths(beginningDate)
+ calculateDifferenceYears(beginningDate)
+}
+
+class LocalDateTime {
+ plusMintutes(minutes)
+ getYear()
+ getMonth()
+ getDayOfMonth()
+}
+
+class Company {
+    string designation;
+ getTestStore()
+ getClientStore()
+}
+
+class TextInputControl {
+ getText(dateText)
+ setText(textDates)
+}
+
+class TestStore {
+ getTests()
+}
+
+class ClientStore {
+ getClients()
+}
+
+class Client {
+    String citizenCardNumber;
+    String numberNHS;
+    String numberTIN;
+    String birthDate;
+    string sex;
+    String phoneNumber;
+    string name;
+}
+
+class Test {
+ String code;
+    String NHSCode;
+    String description;
+ checkTestState()
+ getDateRegistration()
+ getDateValidTest()
+ getRealDateChemAnalysis()
+ getRealDateSample()
+ getRealDateDiagnosis()
+}
+
+class CalculateNumberTests {
+ getNumberRegisteredTestsInterval(beginDate, tests, arraySize, interval, status)
+ getNumberRegisteredTests(dateReference, listTests, interval, status)
+ checkInterval(beginningDate, testDate, interval)
+}
+
+AnalyseOverviewFXMLController.-> AnalyseOverviewController
+AnalyseOverviewFXMLController.-> StatisticsFXMLController
+AnalyseOverviewFXMLController.-> Date
+AnalyseOverviewFXMLController.-> TextInputControl
+StatisticsFXMLController .-> StatisticsController
+StatisticsFXMLController .-> TextInputControl
+
+AnalyseOverviewController .-> Company
+AnalyseOverviewController .-> TestStore
+AnalyseOverviewController .-> App
+AnalyseOverviewController .-> UserSession
+AnalyseOverviewController .-> Test
+AnalyseOverviewController .-> Cliente
+AnalyseOverviewController .-> Date
+AnalyseOverviewController .-> ClientStore
+AnalyseOverviewController .-> ContiguousSubsequence
+
+StatisticsController .-> Company
+StatisticsController .-> TestStore
+StatisticsController .-> App
+StatisticsController .-> UserSession
+StatisticsController .-> Test
+StatisticsController .-> CalculateNumberTests
+
+TestStore "1" -- "*" Test: contains >
+ClientStore "1" -- "*" Client: contains >
+
+CalculateNumberTests "1" .-> "*" Date
+CalculateNumberTests "1" .-> "*" Test
+CalculateNumberTests "1" .-> "*" LocalDateTime
+
+ContiguousSubsequence "1" .-> "*" Date
+ContiguousSubsequence "1" .-> "*" Test
+ContiguousSubsequence "1" .-> "*" LocalDateTime
+@enduml

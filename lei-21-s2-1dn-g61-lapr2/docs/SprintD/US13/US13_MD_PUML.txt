@@ -1,0 +1,84 @@
+@startuml
+hide methods
+left to right direction
+skinparam classAttributeIconSize 0
+
+
+class Company {
+  -String designation
+}
+
+
+class Test{
+  -String code
+  -String NHSCode
+  -String description 
+  -String dateSample 
+  -String timeSmaple
+  -String dateChemAnalysis
+  -String timeChemAnalysis
+  -String dateDiagnosis 
+  -String timeDiagnosis 
+  -String dateValidTest 
+  -String timeValidTest
+}
+class Employee{
+  -String employeeID;
+  -String organizationRole;
+  -String name;
+  -String adress;
+  -String phoneNumber;
+  -int codeSOC;
+}
+class ClinicalChemestryTechnologist{
+}
+class TestParameter{
+ 
+}
+
+class TestParameterResult{
+  -String Value
+  -String metric
+  
+  
+}
+
+class Client{
+  -String citizenCardNumber 
+  -String numberNHS 
+  -String numberTIN
+  -String birthDate
+  -String sex 
+  -String phoneNumber
+  -String name
+}
+interface SortingAl{
+}
+class ConfigurationFile{
+}
+class SortingName{
+}
+class SortingTIN{
+}
+class ReferenceValue{
+}
+
+
+
+Company "1" -- "*" Employee: employs >
+Employee "1" <|-- "*" ClinicalChemestryTechnologist: has >
+ClinicalChemestryTechnologist "1" -- "1..*" TestParameterResult : checks >
+Company "1" -- "*" SortingAl: uses >
+SortingAl "1" <|-- "1" SortingName : implements >
+SortingAl "1" <|-- "1" SortingTIN : implements >
+SortingAl "1" -- "*" ConfigurationFile : is configure by >
+Client "*" -- "1" SortingAl : Makes use of <
+Client "1" -- "1..*"Test : has < 
+Test "1" -- "1..*" TestParameter: has >
+TestParameter "1" -- "1" TestParameterResult: has >
+TestParameterResult "1" -- "1" ReferenceValue : has >
+
+
+
+
+@enduml

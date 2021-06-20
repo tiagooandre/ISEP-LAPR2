@@ -1,0 +1,64 @@
+@startuml
+hide methods
+left to right direction
+skinparam classAttributeIconSize 0
+
+
+class Company {
+  -String designation
+}
+class Laboratory{
+  -String name
+  -String phoneNumber
+  -String numberTIN
+  -String address
+}
+
+class ClinicalAnalisysLaboratory {
+  -String laboratoryID
+}
+
+class TestType {
+  -String description
+  -String code
+  -String collectingMethods
+}
+
+class Administrator {
+}
+class Sample{
+}
+class Test{
+  -String code
+  -String NHSCode
+  -String description 
+  -String dateSample 
+  -String timeSmaple
+  -String dateChemAnalysis
+  -String timeChemAnalysis
+  -String dateDiagnosis 
+  -String timeDiagnosis 
+  -String dateValidTest 
+  -String timeValidTest
+}
+class Employee{
+  -String employeeID;
+  -String organizationRole;
+  -String name;
+  -String adress;
+  -String phoneNumber;
+  -int codeSOC;
+}
+
+
+
+Company "1" -- "*" Employee: employs >
+Employee "1" -- "*" Administrator: has >
+Administrator "1" -- "1..*" ClinicalAnalisysLaboratory : registers >
+Laboratory "1" -- "*" ClinicalAnalisysLaboratory : has >
+ClinicalAnalisysLaboratory "1" -- "*" Sample : collects >
+Sample "*" -- "1" Test : is from >
+Test "1" -- "1" TestType : is of >
+Company "1" -- "1..*" TestType : conduts >
+Company "1" -- "*" Laboratory : owns >
+@enduml

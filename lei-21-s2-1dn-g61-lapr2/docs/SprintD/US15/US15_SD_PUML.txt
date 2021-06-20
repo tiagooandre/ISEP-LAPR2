@@ -1,0 +1,95 @@
+@startuml
+autonumber
+'hide footbox
+actor "LaboratoryCoordinator" as ADM
+
+participant ":ValidatingWorkUI" as UI
+participant ":ValidatingWorkController" as CTRL
+participant ":Company" as C
+participant "store\n:TestStore" as CO
+participant ":ValideTestMapper" as M
+participant "t1:Test" as T
+participant "store1:TestValideStore" as A
+participant ":EmailNotification" as E
+participant "cl:Client" as CL
+
+
+
+activate ADM
+ADM -> UI : asks to validate the Test 
+activate UI
+UI -> CTRL : test1DTO = getTests()
+activate CTRL 
+CTRL -> C : store = getTest1Store()
+activate C
+deactivate C
+CTRL -> CO : tests = getTests()
+activate CO
+
+deactivate CO
+CTRL -> M : toDTO(tests)
+activate M
+ref over M : :SD_Test1Mapper_toDTO_list
+M --> CTRL : test1DTO
+deactivate M
+deactivate CTRL
+
+UI --> ADM : Shows the list of the Test(s) with the 3 dates(test registration date, chemical analysisdate and diagnosis date) to be selected
+deactivate UI
+ADM -> UI : Selects one Test to be Validated
+activate UI 
+UI -> CTRL : validateTest(code)
+activate CTRL 
+CTRL -> CO : t1 = getTestByCode(code)
+activate CO
+deactivate CO
+
+
+
+
+
+CTRL -> T : SetDateValidateTest()
+activate T
+deactivate T
+CTRL -> T : SetTimeValidateTest()
+activate T
+deactivate T
+deactivate CTRL
+UI -> CTRL : getClient()
+activate CTRL
+CTRL -> T : cl = getClient
+activate T
+deactivate T
+deactivate CTRL
+UI --> ADM : Successful Validation
+deactivate UI
+ADM -> UI : Asks to save and add the Validate Test
+activate UI
+UI -> CTRL : addTest()
+activate CTRL
+CTRL -> C : store1 = getValidationStore()
+activate C
+deactivate C
+
+CTRL -> A : addTestVali(t1)
+activate A
+A -> A : validateValide(t1)
+A -> A : addValide(t1)
+deactivate A
+deactivate CTRL
+UI -> CTRL : sendMail(cl)
+activate CTRL
+CTRL -> E : sendMailClient(message)
+activate E
+deactivate E
+
+deactivate CTRL
+UI --> ADM : sucsessfull operation
+
+deactivate CTRL
+deactivate UI
+deactivate ADM
+
+
+deactivate ADM
+@enduml

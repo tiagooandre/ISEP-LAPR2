@@ -1,0 +1,156 @@
+@startuml
+title UC7 - Class Diagram
+
+class RegisterEmployeeUI
+
+class RegisterEmployeeController {
+    + validateUser()
+    + getRoles()
+    + createEmployee(empDTO)
+    + saveEmployee()
+    + createUser()
+}
+
+class App {
+    + getCompany()
+    + getCurrentUserSession()
+}
+
+class UserSession {
+    + isLoggedInWithRole(ADMINISTRATOR)
+}
+
+class Company {
+    string designation;
+    + getOrganizationRoleStore()
+    + getEmployeeStore()
+    + getAuthFacade()
+}
+
+class OrganizationRoleStore {
+    + getRoles()
+    + getRoleById(roleId)
+    + validateEmployeeAttributes()
+}
+
+class EmployeeStore {
+    + saveEmployee(emp)
+    - validateEmployee(emp)
+    - addEmployee(emp)
+}
+
+class RolesMapper {
+    + toDTO(roles)
+}
+
+class OrganizationRoleDTO {
+    + String id;
+    + String description;
+}
+
+class EmployeeDTO {
+    String organizationRole;
+    String name;
+    String address;
+    int phoneNumber;
+    String email;
+    String codeSOC;
+    String doctorIndexNumbee;
+    + getOrganizationRole()
+    + getName()
+    + getAddress()
+    + getPhoneNumber()
+    + getEmail()
+    + getcodeSOC()
+    + getDoctorIndexNumber()
+}
+
+class OrganizationRole {
+    String id;
+    String description;
+    String className;
+    + createEmployee(empDTO)
+}
+
+class AuthFacade {
+    + addUser(name, emailstr, pass)
+}
+
+class Email {
+    String email;
+    + getEmail()
+}
+
+class Password {
+    + String password;
+}
+
+class EmailNotification {
+    + sendEmailToClient(emailstr, pass)
+}
+
+class GeneratePassword {
+    + generatePassowrd()
+}
+
+class UserStore {
+    + createUser(name, emailstr, pass)
+}
+
+class Employee {
+    String employeeID;
+    String name;
+    String address;
+    String phoneNumber;
+    String codeSOC;
+}
+
+class SpecialistDoctor {
+    int doctorIndexNumber;
+}
+
+class User {
+  String name;
+}
+
+RegisterEmployeeUI .-> RegisterEmployeeController
+RegisterEmployeeUI .-> EmployeeDTO
+RegisterEmployeeUI .-> OrganizationRoleDTO
+
+RegisterEmployeeController .-> Company
+RegisterEmployeeController .-> OrganizationRoleStore
+RegisterEmployeeController .-> EmployeeStore
+RegisterEmployeeController .-> UserStore
+RegisterEmployeeController .-> App
+RegisterEmployeeController .-> UserSession
+RegisterEmployeeController .-> EmailNotification
+RegisterEmployeeController .-> GeneratePassword
+RegisterEmployeeController .-> OrganizationRoleDTO
+RegisterEmployeeController .-> OrganizationRole
+RegisterEmployeeController .-> EmployeeDTO
+
+OrganizationRoleStore "1" -- "*" OrganizationRole: contains >
+EmployeeStore "1" -- "*" Employee: contains >
+UserStore "1" -- "*" User: contains >
+
+Company "1" -- "1" OrganizationRoleStore: has >
+Company "1" -- "1" EmployeeStore: has >
+Company "1" -- "1" AuthFacade : has >
+
+AuthFacade "1" -- "1" UserStore: has >
+AuthFacade "1" -- "1" UserSession : has >
+
+Employee <|-- SpecialistDoctor
+Employee "0..1" -- "1" User: acts as >
+Employee "*" -- "1" OrganizationRole: has >
+Employee "1" -- "1" Email: has >
+
+OrganizationRole .-> EmployeeDTO
+
+RolesMapper .-> OrganizationRoleDTO
+RolesMapper .-> OrganizationRole
+App .-> AuthFacade
+
+User "1" -- "1" Email
+User "1" -- "1" Password
+@enduml

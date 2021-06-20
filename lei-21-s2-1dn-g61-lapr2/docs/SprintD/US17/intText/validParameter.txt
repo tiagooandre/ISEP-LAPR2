@@ -1,0 +1,65 @@
+title validParameter
+
+participant ":TestFileController" as ctc #7dcfff
+participant ":Company" as c #7dcfff
+participant "Store5: ParameterStore" as ps #7dcfff
+participant "t: Test" as t #7dcfff
+
+ctc->c: 30: store5 = getParameterStore()
+activate ctc #7dcfff
+activate c #7dcfff
+deactivateafter c
+
+alt line[14]!="NA"
+ctc->ps: 31: parameter = getParameterByCode("WBC00")
+activate ps #7dcfff
+deactivateafter ps
+
+ctc->t: 32: addTestParameter(parameter)
+activate t #7dcfff
+deactivateafter t
+
+ctc->t: 33: addTestResult("WBC00", line[14], "metric")
+activate t #7dcfff
+deactivateafter t
+
+else line[15]!="NA"
+ctc->ps: 31: parameter = getParameterByCode("PLT00")
+activate ps #7dcfff
+deactivateafter ps
+
+ctc->t: 32: addTestParameter(parameter)
+activate t #7dcfff
+deactivateafter t
+
+ctc->t: 33: addTestResult("PLT00", line[15], "metric")
+activate t #7dcfff
+deactivateafter t
+
+else line[16]!="NA"
+ctc->ps: 31: parameter = getParameterByCode("RBC00")
+activate ps #7dcfff
+deactivateafter ps
+
+ctc->t: 32: addTestParameter(parameter)
+activate t #7dcfff
+deactivateafter t
+
+ctc->t: 33: addTestResult("RBC00", line[16], "metric")
+activate t #7dcfff
+deactivateafter t
+
+
+else line[20]!="NA"
+ctc->ps: 31: parameter = getParameterByCode("IgGAN")
+activate ps #7dcfff
+deactivateafter ps
+
+ctc->t: 32: addTestParameter(parameter)
+activate t #7dcfff
+deactivateafter t
+
+ctc->t: 33: addTestResult("IgGAN", line[20], "metric")
+activate t #7dcfff
+deactivateafter t
+end

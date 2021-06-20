@@ -1,0 +1,79 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":RegisterClinicalAnalisysLaboratoryUI" as UI
+participant ":RegisterClinicalAnalisysLaboratoryController" as CTRL
+participant ":Company" as C
+participant "store\n:RegistarClinicalStore" as CO
+
+participant "cl\n:ClinicalAnalisysLaboratory" as CLS
+
+
+activate ADM
+ADM -> UI : asks to register Clinical Analisys Laboratory
+activate UI
+UI --> ADM : requests data (laboratoryID, name, address, phoneNumber, numberTIN)
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+
+UI -> CTRL : createClinical(laboratoryID, name, address, phoneNumber, numberTIN)
+activate CTRL
+
+CTRL -> C : store=getRegistarClinicalStore()
+activate C
+|||
+deactivate C
+
+CTRL -> CO : cl=createClinical(laboratoryID, name, address, phoneNumber, numberTIN)
+activate CO
+CO --> CLS** : create(laboratoryID, name, address, phoneNumber, numberTIN)
+deactivate CO
+
+
+CTRL -> CO : validateClinical(cl)
+activate CO
+CO -> CO : exitsSame(cl)
+|||
+deactivate CO
+deactivate CTRL
+UI -> CTRL : testList()
+activate CTRL
+CTRL -> C : getTestTypes()
+activate C
+deactivate C
+
+deactivate CTRL
+UI --> ADM : shows the data and the list of test types to be selected
+deactivate UI
+
+ADM -> UI : select test type(s)
+activate UI
+activate CTRL
+loop 
+            UI -> CTRL: fillTestList(t)
+            CTRL-> CLS : addTestType(t)
+        
+        end
+deactivate CTRL       
+UI -> ADM : request confirmation
+deactivate UI
+
+ADM --> UI : confirms data 
+activate UI
+UI -> CTRL : saveClinical()
+activate CTRL
+CTRL -> CO : saveClinical(cl)
+activate CO
+CO -> CO : validateClinical(cl)
+CO -> CO : existsSame(cl)
+CO -> CO : addClinical(cl)
+deactivate CO
+deactivate CTRL
+
+UI--> ADM: inform operation success
+deactivate ADM
+@enduml

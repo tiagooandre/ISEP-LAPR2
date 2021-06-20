@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="341px" preserveAspectRatio="none" style="width:777px;height:341px;background:#FFFFFF;" version="1.1" viewBox="0 0 777 341" width="777px" zoomAndPan="magnify"><defs><filter height="300%" id="f1b4lsilyamriq" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f1b4lsilyamriq)" height="216.5313" style="stroke:#A80036;stroke-width:1.0;" width="10" x="308" y="71.4297"/><rect fill="#FFFFFF" filter="url(#f1b4lsilyamriq)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="595" y="100.5625"/><rect fill="#FFFFFF" filter="url(#f1b4lsilyamriq)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="595" y="242.9609"/><rect fill="#FFFFFF" filter="url(#f1b4lsilyamriq)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="723" y="183.8281"/><rect fill="#FFFFFF" filter="url(#f1b4lsilyamriq)" height="135.3984" style="stroke:#000000;stroke-width:2.0;" width="558" x="205" y="145.5625"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="313" x2="313" y1="40.2969" y2="297.9609"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="600" x2="600" y1="40.2969" y2="297.9609"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="728" x2="728" y1="40.2969" y2="297.9609"/><rect fill="#FEFECE" filter="url(#f1b4lsilyamriq)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="192" x="215" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="222" y="24.9951">:ManualReportController</text><rect fill="#FEFECE" filter="url(#f1b4lsilyamriq)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="192" x="215" y="296.9609"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="222" y="316.9561">:ManualReportController</text><rect fill="#FEFECE" filter="url(#f1b4lsilyamriq)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="182" x="507" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168" x="514" y="24.9951">store1:TestValideStore</text><rect fill="#FEFECE" filter="url(#f1b4lsilyamriq)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="182" x="507" y="296.9609"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168" x="514" y="316.9561">store1:TestValideStore</text><rect fill="#FEFECE" filter="url(#f1b4lsilyamriq)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="46" x="703" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="710" y="24.9951">Test</text><rect fill="#FEFECE" filter="url(#f1b4lsilyamriq)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="46" x="703" y="296.9609"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="710" y="316.9561">Test</text><rect fill="#FFFFFF" filter="url(#f1b4lsilyamriq)" height="216.5313" style="stroke:#A80036;stroke-width:1.0;" width="10" x="308" y="71.4297"/><rect fill="#FFFFFF" filter="url(#f1b4lsilyamriq)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="595" y="100.5625"/><rect fill="#FFFFFF" filter="url(#f1b4lsilyamriq)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="595" y="242.9609"/><rect fill="#FFFFFF" filter="url(#f1b4lsilyamriq)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="723" y="183.8281"/><polygon fill="#A80036" points="296,67.4297,306,71.4297,296,75.4297,300,71.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="0" x2="302" y1="71.4297" y2="71.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="7" y="66.3638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="276" x="20" y="66.3638">report = showReport(interval,dHistoricP,re)</text><polygon fill="#A80036" points="583,96.5625,593,100.5625,583,104.5625,587,100.5625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="318" x2="589" y1="100.5625" y2="100.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="325" y="95.4966">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="140" x="338" y="95.4966">list = getTestsValids()</text><path d="M205,145.5625 L283,145.5625 L283,152.5625 L273,162.5625 L205,162.5625 L205,145.5625 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="135.3984" style="stroke:#000000;stroke-width:2.0;" width="558" x="205" y="145.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="33" x="220" y="158.6294">loop</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="171" x="298" y="157.7729">[for each Test in the list]</text><polygon fill="#A80036" points="711,179.8281,721,183.8281,711,187.8281,715,183.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="318" x2="717" y1="183.8281" y2="183.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="8" x="325" y="178.7622">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="291" x="337" y="178.7622">dateValid = getDateValidTest().toYMDString()</text><polygon fill="#A80036" points="583,238.9609,593,242.9609,583,246.9609,587,242.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="318" x2="589" y1="242.9609" y2="242.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="325" y="237.895">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="245" x="338" y="237.895">cases = covidCasesPerDay(dateValid)</text><!--MD5=[d1bbbc01f4e810078321385bddd796c8]
+@startuml
+autonumber
+
+'hide footbox
+
+
+
+participant ":ManualReportController" as CTRL
+
+
+participant "store1:TestValideStore" as A
+
+
+participant "Test" as T
+
+
+-> CTRL : report = showReport(interval,dHistoricP,re)
+activate CTRL
+CTRL -> A : list = getTestsValids()
+activate A
+
+deactivate A
+loop for each Test in the list
+CTRL -> T : dateValid = getDateValidTest().toYMDString()
+activate T
+deactivate T
+CTRL -> A : cases = covidCasesPerDay(dateValid)
+activate A
+deactivate A
+
+
+end
+deactivate CTRL
+@enduml
+
+@startuml
+autonumber
+
+
+
+
+participant ":ManualReportController" as CTRL
+
+
+participant "store1:TestValideStore" as A
+
+
+participant "Test" as T
+
+
+-> CTRL : report = showReport(interval,dHistoricP,re)
+activate CTRL
+CTRL -> A : list = getTestsValids()
+activate A
+
+deactivate A
+loop for each Test in the list
+CTRL -> T : dateValid = getDateValidTest().toYMDString()
+activate T
+deactivate T
+CTRL -> A : cases = covidCasesPerDay(dateValid)
+activate A
+deactivate A
+
+
+end
+deactivate CTRL
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 12:40:07 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

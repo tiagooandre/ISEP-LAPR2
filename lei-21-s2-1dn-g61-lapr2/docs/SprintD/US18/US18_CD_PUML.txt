@@ -1,0 +1,75 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class ManualReportController {
+  -TestValideStore stor
+  -Company company
+  -Send sd
+  +getAlg()
+  +create()
+  +create2()
+  +create3()
+  +showReport(interval, dHistoricP, re)
+  +send(Report)
+}
+class ManualReportUI{
+}
+class Test {
+  +getDateValidTest()
+}
+class Report2NHS{
+  +writeUsingFileWriter(text)
+}
+class Sender{
+  +create()
+  +sender(text)
+}
+class LienarClass{
+  +create(total)
+  +setVariable(total)
+}
+class LienarClass2{
+  +create(mean, y)
+  +setVariable(total)
+}
+class MultiClass{
+  +create(total,mean)
+  +setVariable(total, mean)
+}
+class Company {
+  -String designation
+  +getTestValideStore()
+  +getRegisterClientStore()
+  +getRegressionStore()
+}
+
+class TestValideStore {
+  -List<Test> testValideList
+  +totalCases
+  +getTestsValids()
+  +covidCasesPerDay()
+}
+
+class RegisterClientStore{
+  +meanAge()
+}
+
+
+class RegressionStore{
+  +getAlist()
+}
+
+
+
+ManualReportUI ..> ManualReportController 
+ManualReportController ..> Company
+Company "1" --> "1" TestValideStore: has >
+Company "1" --> "1" RegisterClientStore: has >
+Company "1" --> "1" RegressionStore: has >
+TestValideStore "1" --> "*" Test: uses >
+ManualReportController ..> LienarClass
+ManualReportController ..> LienarClass2
+ManualReportController ..> MultiClass
+ManualReportController ..> Sender
+Sender "1" --> "1" Report2NHS: uses >
+@enduml

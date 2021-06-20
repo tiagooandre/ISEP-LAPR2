@@ -1,0 +1,48 @@
+@startuml
+title Relationships - Class Diagram
+
+class Employee{
+    int employeeID;
+    String organizationRole;
+    String name;
+    String adress;
+    int phoneNumber;
+    int codeSOC;
+}
+
+class Administrator{
+
+}
+
+class Company {
+    String designation;
+}
+
+class TestType {
+    String designation;
+    String code;
+    String collectingMethods;
+}
+
+class Parameter {
+    string designation;
+}
+
+class ParameterCategory{
+    int code;
+    string description;
+    int NHSID;
+}
+
+Employee <|-- Administrator
+Administrator "1" -- "*" TestType: specifies a new >
+Administrator "1" -- "*" Parameter: specifies a new >
+ParameterCategory "*" -- "1" Administrator: created by >
+Company "1" -- "*" TestType: conducts >
+Parameter "*" -- "1" ParameterCategory: presented under >
+TestType "1" -- "*" ParameterCategory: measured by >
+Company "1" -- "*" Parameter: capable of analysing >
+Company "1" -- "*" ParameterCategory: adopts >
+Company "1" -- "*" Employee: has >
+
+@enduml

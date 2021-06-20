@@ -1,0 +1,27 @@
+title validCategory
+
+participant ":TestFileController" as ctc #7dcfff
+participant ":Company" as c #7dcfff
+participant "Store4: ParameterCategoryStore" as pcs #7dcfff
+participant "t: Test" as t #7dcfff
+
+activate ctc #7dcfff
+
+ctc->c: 26: store4 = getParameterCategoryStore()
+activate c #7dcfff
+deactivateafter c
+
+alt line[12]!="NA"
+ctc->pcs: 27: category = getCategoryByCode("pc002")
+activate pcs #7dcfff
+deactivateafter pcs
+
+else line[19]!="NA"
+ctc->pcs: 27: category = getCategoryByCode("pc001")
+activate pcs #7dcfff
+deactivateafter pcs
+end
+
+ctc->t: 28: setCategory(category)
+activate t #7dcfff
+deactivateafter t

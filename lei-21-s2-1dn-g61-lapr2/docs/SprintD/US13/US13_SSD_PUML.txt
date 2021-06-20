@@ -1,0 +1,21 @@
+@startuml
+autonumber
+actor "Clinical Chemestry Technologist" as AD
+
+activate AD
+AD -> ":System" : Starts ordering the Clients by Name or TIN
+activate ":System"
+":System" --> AD : Shows the Client that already has the test result by TIN or Name
+deactivate ":System"
+AD -> ":System" : Selects the Client to be reviewed
+activate ":System"
+":System" --> AD : Shows the Clients Test Results and request confirmation
+deactivate ":System"
+AD -> ":System" : Confirms the Client Data
+activate ":System"
+":System" --> AD : Informs operation success
+deactivate ":System"
+
+deactivate AD
+
+@enduml

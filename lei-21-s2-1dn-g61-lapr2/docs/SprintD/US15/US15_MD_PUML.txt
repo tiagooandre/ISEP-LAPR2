@@ -1,0 +1,65 @@
+@startuml
+hide methods
+left to right direction
+skinparam classAttributeIconSize 0
+
+
+class Company {
+  -String designation
+}
+
+
+class Test{
+  -String code
+  -String NHSCode
+  -String description 
+  -String dateSample 
+  -String timeSmaple
+  -String dateChemAnalysis
+  -String timeChemAnalysis
+  -String dateDiagnosis 
+  -String timeDiagnosis 
+  -String dateValidTest 
+  -String timeValidTest
+}
+class Employee{
+  -String employeeID;
+  -String organizationRole;
+  -String name;
+  -String adress;
+  -String phoneNumber;
+  -int codeSOC;
+}
+class LaboratoryCoordinator{
+}
+class TestParameter{
+ 
+}
+class Diagnosis{
+}
+class Report{
+  -String text
+}
+class TestParameterResult{
+  -String Value
+  -String metric
+  
+}
+class ReferenceValue{
+}
+
+
+
+Company "1" -- "*" Employee: employs >
+Company "1" -- "*" Report: wants >
+Company "1" -- "*" Test: performs >
+Employee "1" <|-- "*" LaboratoryCoordinator: has >
+LaboratoryCoordinator "1" -- "1..*" Report : Validates >
+Test "1" -- "1..*" TestParameter: has >
+TestParameter "1" -- "1" TestParameterResult: has >
+TestParameterResult "1" -- "1" ReferenceValue: records >
+Report "1" -- "1" Diagnosis : contains >
+Diagnosis "*" -- "1" Test : is from >
+Diagnosis "1" -- "1" TestParameter: created with <
+
+@enduml

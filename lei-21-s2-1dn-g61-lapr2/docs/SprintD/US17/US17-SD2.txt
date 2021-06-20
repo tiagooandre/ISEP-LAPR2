@@ -1,0 +1,109 @@
+title US17 Sequence Diagram
+actor "Laboratory Coordinator" as r #7dcfff
+
+participant ":TestFileUI" as UI #7dcfff
+participant ":TestFileController" as ctc #7dcfff
+participant "CSVReader" as csv #7dcfff
+
+
+participant ":Company" as c #7dcfff
+
+participant "Store:TestStore" as ts #7dcfff
+
+participant "Store7:RegisterClinicalStore" as tl #7dcfff
+
+participant "Store2:ClientStore" as cs #7dcfff
+
+participant "Store3: TestTypeStore" as tts #7dcfff
+
+participant "Store4: ParameterCategoryStore" as pcs #7dcfff
+
+participant "Store5: ParameterStore" as ps #7dcfff
+
+participant "t: Test" as t #7dcfff
+
+participant "c: Client" as cl #7dcfff
+
+participant ": GeneratePassword" as gp #7dcfff
+
+participant ": AuthFacade" as auth #7dcfff
+
+participant ": userStore" as user #7dcfff
+
+participant ": User" as u #7dcfff
+
+participant "Store6: TestValideStore" as tv #7dcfff
+
+
+r->UI: 1: add tests from file
+activate UI #7dcfff
+
+r<--UI: 2: request data(fileName)
+deactivateafter UI
+
+r->UI: 3: types requested data
+activate UI #7dcfff
+
+loop Gets the test from each line
+
+UI->ctc: 4: getTestLine(fileName, line)
+activate ctc #7dcfff
+
+ctc->csv: 5: line[] = createTestFromFile(fileName, line)
+activate csv #7dcfff
+deactivateafter csv
+deactivateafter ctc
+
+UI->ctc: 6: validCode()
+activate ctc #7dcfff
+ref over ctc : validCode
+deactivateafter ctc
+
+UI->ctc: 7: validLab()
+activate ctc #7dcfff
+ref over ctc : validLab
+deactivateafter ctc
+
+UI->ctc: 8: validClient()
+activate ctc #7dcfff
+ref over ctc : validClient
+deactivateafter ctc
+
+UI->ctc: 9: validTestType()
+activate ctc #7dcfff
+ref over ctc : validTestType
+deactivateafter ctc
+
+UI->ctc: 10: validCategory()
+activate ctc #7dcfff
+ref over ctc : validCategory
+deactivateafter ctc
+
+UI->ctc: 11: validParameter()
+activate ctc #7dcfff
+ref over ctc : validParameter
+deactivateafter ctc
+
+UI->ctc: 12: validDateTime() 
+activate ctc #7dcfff
+
+ctc->t: 13: setDateTimeAll(line[21].substring(0,10), line[22].substring(0,10), line[23].substring(0,10), line[24].substring(0,10), line[21].substring(11), line[22].substring(11), line[23].substring(11), line[24].substring(11))
+activate t #7dcfff
+deactivateafter t
+deactivateafter ctc
+
+UI->ctc: 14: addCreatedTest()
+activate ctc #7dcfff
+
+ctc->c: 15: store6 = getTestVStore()
+activate c #7dcfff
+deactivateafter c
+
+ctc->tv: 16: saveTestVali(t)
+activate tv #7dcfff
+deactivateafter tv
+
+end
+
+ctc-->UI: 17: informs which tests were added and which had invalid attributes
+deactivateafter ctc

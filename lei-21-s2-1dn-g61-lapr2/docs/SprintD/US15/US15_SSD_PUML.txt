@@ -1,0 +1,23 @@
+@startuml
+autonumber
+actor "Laboratory Coordinator" as AD
+
+activate AD
+AD -> ":System" : Starts Validating a Test
+activate ":System"
+":System" --> AD : Shows the Test with the 3 dates(test registration date, the chemical analysys date and the diagnosis date registered in the system)
+deactivate ":System"
+
+AD -> ":System" : Selects the Test to be validated 
+activate ":System"
+":System" --> AD : Shows the validation and request confirmation
+deactivate ":System"
+
+AD -> ":System" : Confirms the Validation
+activate ":System"
+":System" --> AD : Informs operation success
+deactivate ":System"
+
+deactivate AD
+
+@enduml

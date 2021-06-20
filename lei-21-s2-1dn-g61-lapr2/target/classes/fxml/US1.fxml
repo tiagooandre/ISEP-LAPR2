@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.US1Controller">
+   <children>
+      <ScrollPane prefHeight="296.0" prefWidth="600.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="testes" onMouseClicked="#view" prefHeight="296.0" prefWidth="600.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button layoutX="461.0" layoutY="321.0" mnemonicParsing="false" onAction="#sair1" text="Exit" />
+      <Button layoutX="403.0" layoutY="321.0" mnemonicParsing="false" onAction="#seeResult" text="Ok" />
+      <TextField fx:id="test" layoutX="175.0" layoutY="321.0" />
+      <Label layoutX="85.0" layoutY="326.0" prefHeight="21.0" prefWidth="71.0" text="Code:" />
+      <Button layoutX="521.0" layoutY="321.0" mnemonicParsing="false" text="Back" />
+   </children>
+</AnchorPane>

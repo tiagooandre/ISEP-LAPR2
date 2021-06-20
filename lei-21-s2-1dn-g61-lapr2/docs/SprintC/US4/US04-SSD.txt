@@ -1,0 +1,40 @@
+title US4 System Sequence Diagram
+actor Receptionist #7dcfff
+participant ":System" as System #7dcfff
+
+activate Receptionist #7dcfff
+Receptionist->System: 1: starts new test
+
+activate System #7dcfff
+Receptionist<--System: 2: request data(testNHScode, clientTIN)
+deactivate System #7dcfff
+
+Receptionist->System: 3: types requested data
+activate System #7dcfff
+
+Receptionist<--System:4: shows list of test types to choose from
+deactivate System #7dcfff
+
+Receptionist->System: 5: select test type
+activate System #7dcfff
+
+Receptionist<--System: 6: shows the list of categories to choose from
+deactivate System #7dcfff
+
+Receptionist->System: 7: select category
+activate System #7dcfff
+
+Receptionist<--System: 8: shows the list of parameters to choose from
+deactivate System #7dcfff
+
+Receptionist->System: 9: select parameter(s)
+activate System #7dcfff
+
+Receptionist<--System: 10: shows data and request confirmation
+deactivate System #7dcfff
+
+Receptionist->System: 11: confirms the data
+activate System #7dcfff
+
+Receptionist<--System: 12: informs operation success 
+deactivate System #7dcfff

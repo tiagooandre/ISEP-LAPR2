@@ -1,0 +1,38 @@
+@startuml
+title Relationships - Class Diagram
+
+class Employee {
+    String employeeID;
+    String organizationRole;
+    String name;
+    String adress;
+    int phoneNumber;
+    int codeSOC;
+}
+
+class Client {
+    int citizenCardNumber;
+    int numberNHS;
+    int numberTIN;
+    String birthDate;
+    string sex;
+    int phoneNumber;
+    string name;
+}
+
+class Company {
+    string designation;
+}
+
+class EmailNotification  {
+    string email
+}
+
+
+Client "1" -- "*" EmailNotification: receives >
+
+Company "1" -- "*" Client: have >
+Company "1" -- "*" Employee: has >
+Employee "1" <|-- "*" Receptionist
+Receptionist "1" -- "*" Client: registers a >
+@enduml

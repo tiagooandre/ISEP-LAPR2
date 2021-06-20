@@ -1,0 +1,28 @@
+@startuml
+autonumber
+actor "Administrator" as AD
+
+activate AD
+AD -> ":System" : Starts registering new Clinical analisys laboratory
+activate ":System"
+":System" --> AD : requests data (LaboratoryId; Name; Address; Phone Number; TIN number.)
+deactivate ":System"
+
+AD -> ":System" : types requested data
+activate ":System"
+":System" --> AD : shows type test list and ask to select one or more
+deactivate ":System"
+
+AD -> ":System" : selects type(s) of test(s) 
+activate ":System"
+":System" --> AD : shows all data and requests confirmation
+deactivate ":System"
+
+AD -> ":System" : confirms the data
+activate ":System"
+":System" --> AD : informs operation success
+deactivate ":System"
+
+deactivate AD
+
+@enduml

@@ -1,0 +1,58 @@
+@startuml
+class Client {
+    String citizenCardNumber;
+    String numberNHS;
+    String numberTIN;
+    String birthDate;
+    string sex;
+    String phoneNumber;
+    string name;
+}
+
+class Company {
+    String designation;
+}
+
+class Parameter {
+	String designation;
+  String code;
+}
+
+class TestParameter
+
+class TestParameterResult{
+     String value;
+     String metric;
+     Date createdAt;
+}
+
+class Test {
+    String code;
+    String NHSCode;
+    String testResult
+    String dateRegistration;
+    String timeRegistration;
+    String dateSample;
+    String timeSmaple;
+    String dateChemAnalysis;
+    String timeChemAnalysis;
+    String dateDiagnosis;
+    String timeDiagnosis;
+    String dateValidTest;
+    String timeValidTest;
+}
+
+
+
+Client "1" -- "*" Test: does a >
+Client "1" -- "*" TestParameter: consults the >
+Company "1" -- "*" Test: performs >
+Company "1" -- "*" Client: have >
+Company "1" -- "*" Parameter: capable of analysing >
+Test "*" -- "1" Client: requested by >
+Test "1" -- "1..*" TestParameter: has >
+TestParameterResult "1" -- "1" TestParameter: has <
+TestParameter "*" -- "1" Parameter: refers to >
+TestParameter "1" -- "1" Parameter: has >
+TestParameter "1" -- "1" TestParameterResult: has >
+@enduml

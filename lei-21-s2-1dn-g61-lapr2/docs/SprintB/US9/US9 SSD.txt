@@ -1,0 +1,28 @@
+title US9 System Sequence Diagram
+actor Administrator #7dcfff
+participant ":System" as System #7dcfff
+
+activate Administrator #7dcfff
+Administrator->System: 1: starts new test type
+
+activate System #7dcfff
+Administrator<--System: 1.1: request data(code, designation, collectingMethods)
+deactivate System #7dcfff
+
+Administrator->System: 2: types requested data
+activate System #7dcfff
+
+Administrator<--System: 2.1: shows the data and list of parameters to choose from
+deactivate System #7dcfff
+
+Administrator->System: 3: select parameter(s)
+activate System #7dcfff
+
+Administrator<--System: 3.1: request confirmation
+deactivate System #7dcfff
+
+Administrator->System: 4: confirms the data
+activate System #7dcfff
+
+Administrator<--System: 4.1: informs operation success and shows the list of test types 
+deactivate System #7dcfff

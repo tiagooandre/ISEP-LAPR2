@@ -1,0 +1,29 @@
+@startuml
+autonumber
+actor "Administrator" as AD
+
+activate AD
+AD -> ":System" : Starts sending Covid Report to NHS
+activate ":System"
+":System" --> AD : request data(intervals,dHistoricP)
+deactivate ":System"
+
+AD -> ":System" : Types the requested data
+activate ":System"
+":System" --> AD : Asks to choose 1 of 2 algorithms
+deactivate ":System"
+
+AD-> ":System": selects 1 algorithm
+activate ":System"
+":System" --> AD: Shows the Report with all the Data
+deactivate ":System"
+
+AD-> ":System":Sends Report
+activate ":System"
+":System" --> AD: Sends report to NHS and shows the the success of the operation
+deactivate ":System"
+
+
+deactivate AD
+
+@enduml

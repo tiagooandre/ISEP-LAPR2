@@ -1,0 +1,61 @@
+@startuml
+class Employee {
+    String employeeID;
+    String name;
+    String adress;
+    String phoneNumber;
+    String codeSOC;
+}
+
+
+class Client {
+    String citizenCardNumber;
+    String numberNHS;
+    String numberTIN;
+    String birthDate;
+    string sex;
+    String phoneNumber;
+    string name;
+}
+
+class Company {
+    String designation;
+}
+
+
+
+class Test {
+    String code;
+    String NHSCode;
+    String description;
+    String dateSample;
+    String timeSmaple;
+    String dateChemAnalysis;
+    String timeChemAnalysis;
+    String dateDiagnosis;
+    String timeDiagnosis;
+    String dateValidTest;
+    String timeValidTest;
+}
+
+class Report {
+	String text;
+}
+class Diagnosis
+
+class SpecialistDoctor {
+    int doctorIndexNumber;
+}    
+
+Client "1" -- "*" Test: does a >
+
+Employee "1" <|-- "*" SpecialistDoctor
+
+Company "1" -- "*" Employee: has >
+Report "1" -- "1" Diagnosis: contains >
+SpecialistDoctor "1" -- "*" Diagnosis: checks >
+SpecialistDoctor "1" -- "*" Diagnosis: writes >
+SpecialistDoctor "1" -- "*" Report: writes >
+SpecialistDoctor "1" -- "*" Test: analyzes >
+Test "*" -- "1" Client: requested by >
+@enduml

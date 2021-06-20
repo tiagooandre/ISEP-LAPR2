@@ -1,0 +1,16 @@
+title US17 System Sequence Diagram
+actor "Laboratory Coordinator" as lb #7dcfff
+participant ":System" as System #7dcfff
+
+activate lb #7dcfff
+lb->System: 1: starts adding tests from file
+
+activate System #7dcfff
+lb<--System: 2: request data(fileName)
+deactivate System #7dcfff
+
+lb->System: 3: types requested data
+activate System #7dcfff
+
+lb<--System:4: informs which tests were added and which had invalid attributes
+deactivate System #7dcfff

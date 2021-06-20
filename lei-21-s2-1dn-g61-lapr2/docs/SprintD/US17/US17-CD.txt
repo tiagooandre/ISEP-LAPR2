@@ -1,0 +1,213 @@
+@startuml
+
+class TestFileUI{
+}
+
+class TestFileController{
+String[] line;
+getTestLine()
+validCode()
+validLab()
+validClient()
+validTestType()
+validCategory()
+validParameter()
+validDateTime()
+addCreatedTest()
+}
+
+class CSVReader{
+createTestFromFile()
+}
+
+class Company{
+designation;
+getTestStore()
+getClientStore()
+getAuthFacade()
+getTestTypeStore()
+getParameterCategoryStore()
+getParameterStore()
+getTestVStore()
+}
+
+class TestStore{
+getTestByNHS()
+}
+
+class RegisterClinicalStore{
+getClinicById()
+}
+
+class ClientStore{
+getClientByTIN()
+}
+
+class TestTypeStore{
+getTestTypeById()
+}
+
+class ParameterCategoryStore{
+getCategoryByCode()
+}
+
+class ParameterStore{
+getParameterByCode()
+}
+
+class ParameterStore{
+getClinicByCode()
+}
+
+class TestValideStore{
+saveTestVali()
+}
+
+class Test{
+String testNHScode;
+String testCode;
+String dateSample;
+String timeSmaple;
+String dateChemAnalysis;
+String timeChemAnalysis;
+String dateDiagnosis;
+String timeDiagnosis;
+String dateValidTest;
+String timeValidTest;
+setCode()
+setClient()
+setTestType()
+setCategory()
+addTestParameter()
+addTestResult()
+setDateTimeAll()
+}
+
+class ClinicalAnalysisLaboratory{
+String laboratoryID;
+String name;
+String adress;
+String phoneNumber;
+String numberTIN;
+}
+
+class AuthFacade{
+createUser()
+}
+
+class UserStore{
+createUser()
+}
+
+class GeneratePassword{
+generatePassword;
+}
+
+class Report{
+String text;
+}
+
+class Diagnosis{
+}
+
+class TestParameter{
+}
+
+class TestParameterResult{
+String result;
+String metric;
+}
+
+class ReferenceValue{
+String code;
+Double min;
+Double max;
+String usedMetric;
+}
+
+class Client{
+    String citizenCardNumber;
+    String numberNHS;
+    String numberTIN;
+    String birthDate;
+    String sex;
+    String phoneNumber;
+    String name;
+}
+
+class TestType {
+    String designation;
+    String code;
+    String collectingMethods;
+}
+
+class Parameter{
+    String designation;
+    String code
+}
+
+class ParameterCategory{
+    String code;
+    String designation;
+    String NHSID;
+}
+
+TestFileUI "1" ..> "1" TestFileController
+
+TestFileController "1" ..> "1" Company
+TestFileController "1" ..> "1" GeneratePassword
+
+Company "1" --> "1" TestStore :has
+Company "1" --> "1" RegisterClinicalStore :has
+Company "1" --> "1" ClientStore :has
+Company "1" --> "1" TestTypeStore :has
+Company "1" --> "1" ParameterCategoryStore :has
+Company "1" --> "1" ParameterStore :has
+Company "1" --> "1" TestValideStore :has
+
+Company "1" --> "1" AuthFacade :has
+
+
+TestFileController "1" ..> "1" TestStore
+TestFileController "1" ..> "1" RegisterClinicalStore
+TestFileController "1" ..> "1" ClientStore
+TestFileController "1" ..> "1" TestTypeStore
+TestFileController "1" ..> "1" ParameterCategoryStore
+TestFileController "1" ..> "1" ParameterStore
+TestFileController "1" ..> "1" TestValideStore
+TestFileController "1" ..> "1" CSVReader
+
+
+TestStore "1" --> "*" Test :contains
+RegisterClinicalStore "1" --> "*" ClinicalAnalysisLaboratory :contains
+ClientStore "1" --> "*" Client :contains
+TestTypeStore "1" --> "*" TestType :contains
+ParameterCategoryStore "1" --> "*" ParameterCategory :contains
+ParameterStore "1" --> "*" Parameter :contains
+TestValideStore "1" --> "*" Test :contains
+
+
+Test "1" --> "1" Client :has
+Test "1" --> "1" TestType :has
+Test "1" --> "1" ParameterCategory :has
+Test "1" --> "*" Parameter :has
+
+Test "1" --> "1" Report :has
+Test "1" --> "*" TestParameter : has
+
+Report "1" -- "1" Diagnosis :has
+Diagnosis "1" -- "*" TestParameter :contains
+
+AuthFacade "1" --> "1" UserStore :has
+
+
+TestParameter "1" --> "1" Parameter :has 
+TestParameter "1" --> "1" TestParameterResult :has 
+
+
+TestParameterResult "1" --> "1" ReferenceValue: has
+
+ClinicalAnalysisLaboratory "1" --> "*" Test: performs
+
+
+@enduml

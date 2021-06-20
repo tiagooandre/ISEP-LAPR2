@@ -1,0 +1,36 @@
+participant ":CreateCategoryController" as ctc #7dcfff
+
+participant ":parameterCategoryMapper" as pm #7dcfff
+participant "testTypeCategories: List<ParameterCategory>" as pl #7dcfff
+participant "pcDTO: ParameterCategoryDTO" as pDTO #7dcfff
+participant "categoriesDTO: List<ParameterCategoryDTO>" as pdto #7dcfff
+participant "pc: ParameterCategory" as p #7dcfff
+
+
+
+ctc->pm: 1:  toCategoriesDTO(testTypeCategories)
+activate pm #7dcfff
+
+pm-->>*pdto: 2: create()
+loop for each ParameterCategory in testTypeCategories
+
+pm->pl: 3: pc=ParameterCategory(i)
+activate pl #7dcfff
+deactivateafter pl
+
+pm->p: 4: code = getCode()
+activate p #7dcfff
+deactivateafter p
+
+pm->p: 5: description = getDescription()
+activate p #7dcfff
+deactivateafter p
+
+pm-->>*pDTO: 6: create(code, description)
+
+pm->pdto: 7: add(pcDTO)
+activate pdto #7dcfff
+deactivateafter pdto
+
+end
+pm->ctc: 8: categoriesDTO

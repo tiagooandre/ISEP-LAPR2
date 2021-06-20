@@ -1,0 +1,41 @@
+@startuml
+autonumber
+
+'hide footbox
+
+
+
+participant ":ManualReportController" as CTRL
+participant ":Company" as C
+
+participant "store1:TestValideStore" as A
+participant "store2:RegisterClientStore" as S
+
+
+participant "multi:MultiClass" as M
+
+-> CTRL : re= create()
+
+activate CTRL
+CTRL -> C :store1 = getTestValideStore()
+activate C
+deactivate C
+CTRL -> C : store2 = getRegisterClientStore()
+activate C
+deactivate C
+CTRL -> A: total = totalCases()
+activate A
+deactivate A
+CTRL -> S: mean = meanAge()
+activate S
+deactivate S
+CTRL -> M : setvariable(total,mean)
+activate M
+M --> M : create(total,mean)
+deactivate M
+
+deactivate CTRL
+@enduml
+
+
+

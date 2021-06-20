@@ -1,0 +1,25 @@
+@startuml
+autonumber
+
+'hide footbox
+
+
+
+participant ":ManualReportController" as CTRL
+participant ":Report2NHS" as CL
+participant "sd:Sender" as S
+ 
+-> CTRL : send(report)
+activate CTRL
+CTRL -> S** : create()
+CTRL -> S : sender(text)
+activate S
+S ->  CL : writeUsingFileWriter(text)
+activate CL
+deactivate CL
+deactivate S
+deactivate CTRL
+@enduml
+
+
+

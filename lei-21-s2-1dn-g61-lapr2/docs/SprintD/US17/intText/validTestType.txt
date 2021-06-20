@@ -1,0 +1,29 @@
+title validTestType
+
+
+participant ":TestFileController" as ctc #7dcfff
+participant ":Company" as c #7dcfff
+participant "Store3: TestTypeStore" as tts #7dcfff
+participant "t: Test" as t #7dcfff
+
+
+ctc->c: 22: store3 = getTestTypeStore()
+activate ctc #7dcfff
+activate c #7dcfff
+deactivateafter c
+
+alt line[11]=Blood
+ctc->tts: 23: testType = getTestTypeById("tt002")
+activate tts #7dcfff
+deactivateafter tts
+
+else line[11]=Covid
+ctc->tts: 23: testType = getTestTypeById("tt001")
+activate tts #7dcfff
+deactivateafter tts
+end
+
+ctc->t: 24: setTestType(testType)
+activate t #7dcfff
+deactivateafter t
+deactivateafter ctc

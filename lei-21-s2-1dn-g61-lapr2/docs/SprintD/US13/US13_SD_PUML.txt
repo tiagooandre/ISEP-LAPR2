@@ -1,0 +1,82 @@
+@startuml
+autonumber
+'hide footbox
+actor "Clinical Chemistry Technologist " as ADM
+
+participant ":CheckResultUI" as UI
+participant ":CheckResultController" as CTRL
+participant ":Company" as C
+participant "store1\n:TestValideStore" as CO
+participant "t:Test" as T
+participant "cl:Client" as CL
+participant "listC\n:List<Client>" as CC
+participant "<<Interface>> sa:SortingAl" as SA
+participant "App" as A
+
+
+participant "list:List<Test>" as TT
+participant "listCT:List<Test>" as CT
+
+activate ADM
+ADM -> UI : Starts ordering the Clients by Name or TIN
+activate UI
+UI -> CTRL : listC=sortList()
+activate CTRL 
+CTRL -> C : store1 = getTestValideStore()
+activate C
+deactivate C
+CTRL -> CO : list = getTestsValids
+activate CO
+deactivate CO
+loop for eact Test in the list
+    CTRL ->  T: cl = getClient
+    activate T
+    deactivate T
+    
+    CTRL -> CC : add(cl)
+    activate CC
+    deactivate CC
+    
+
+end
+CTRL -> A : sa = sort1()
+activate A
+deactivate A
+
+CTRL -> SA: compare(o1,o2)
+activate SA
+deactivate SA
+
+
+
+
+deactivate CTRL
+
+UI --> ADM : Shows the sorted Clients
+deactivate UI
+ADM -> UI : Selects one Client to see the Test Results
+activate UI 
+UI -> CTRL : listCT = getTestFromCL(cl)
+
+activate CTRL 
+CTRL -> CL : getLstTestComplete()
+activate CL
+deactivate CL
+
+deactivate CTRL
+
+
+UI --> ADM : Shows the Test
+deactivate UI
+ADM -> UI : Asks to Confirm 
+activate UI
+
+UI --> ADM : Shows sucsessfull operation
+
+deactivate CTRL
+deactivate UI
+deactivate ADM
+
+
+deactivate ADM
+@enduml

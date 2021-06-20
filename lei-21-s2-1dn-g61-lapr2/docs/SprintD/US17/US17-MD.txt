@@ -1,0 +1,118 @@
+@startuml
+
+class Company{
+String designation;
+}
+
+class Employee{
+    int employeeID;
+    String organizationRole;
+    String name;
+    String adress;
+    int phoneNumber;
+    int codeSOC;
+}
+
+class Test{
+String testNHScode;
+String testCode;
+String dateSample;
+String timeSmaple;
+String dateChemAnalysis;
+String timeChemAnalysis;
+String dateDiagnosis;
+String timeDiagnosis;
+String dateValidTest;
+String timeValidTest;
+}
+
+class ClinicalAnalysisLaboratory{
+String laboratoryID;
+String name;
+String adress;
+String phoneNumber;
+String numberTIN;
+}
+
+class TestType {
+    String designation;
+    String code;
+    String collectingMethods;
+}
+
+class Parameter{
+    String designation;
+    String code
+}
+
+class ParameterCategory{
+    String code;
+    String designation;
+    String NHSID;
+}
+
+class Client{
+    String citizenCardNumber;
+    String numberNHS;
+    String numberTIN;
+    String birthDate;
+    String sex;
+    String phoneNumber;
+    String name
+}
+
+class Report{
+String text;
+}
+
+class Diagnosis{
+}
+
+class TestParameter{
+}
+
+class TestParameterResult{
+String result;
+String metric;
+}
+
+class ReferenceValue{
+String code;
+Double min;
+Double max;
+String usedMetric;
+}
+
+
+Company "1" -- "*" Test :performs >
+Company "1" -- "1" TestType :has >
+Company "1" -- "1" ParameterCategory :has >
+Company "1" -- "1" Parameter :has >
+
+Parameter "*" --> "1" ParameterCategory :presented under >
+
+Test "*" -- "1" Client :requested by >
+Test "1" -- "1" TestType :is of >
+TestType "1" -- "1" ParameterCategory :measured by >
+Test "1" -- "1" Report :has >
+Test "1" -- "*" TestParameter : has >
+
+Report "1" -- "1" Diagnosis :has >
+Diagnosis "1" -- "*" TestParameter :contains >
+
+
+TestParameter "1" -- "1" Parameter :has >
+TestParameter "1" -- "1" TestParameterResult :has >
+
+
+TestParameterResult "1" -- "1" ReferenceValue: has >
+
+Company "1" -- "*" Employee :has >
+
+LaboratoryCoordinator  --|> Employee
+LaboratoryCoordinator "1" -- "*" Test :imports from file >
+
+ClinicalAnalysisLaboratory "1" -- "*" Test: performs >
+
+
+@enduml
